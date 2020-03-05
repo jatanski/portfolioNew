@@ -1,0 +1,89 @@
+.contact {
+	position: relative;
+	background: #ff4b2c;
+	background: -moz-linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
+	background: -webkit-linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
+	background: linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
+	padding: 20vh 30vw;
+	color: rgba(255, 255, 255, 0.9);
+
+	&__title {
+		// text-transform: uppercase;
+		font-size: 6.5rem;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2vh;
+
+		&--email,
+		&--message {
+			background-color: rgba(255, 255, 255, 0.1);
+			color: rgba(255, 255, 255, 0.7);
+			height: 55px;
+			vertical-align: middle;
+			padding: 0 10px;
+			margin-bottom: 1vh;
+			font-size: 1rem;
+
+			&::placeholder {
+				color: rgba(255, 255, 255, 0.7);
+			}
+		}
+
+		&--message {
+			height: 110px;
+		}
+
+		&--button {
+			background-color: rgba(255, 255, 255, 0.9);
+			color: #555;
+			height: 55px;
+			vertical-align: middle;
+			padding: 0 10px;
+			margin-bottom: 1vh;
+			text-transform: uppercase;
+			font-size: 1.6rem;
+			box-shadow: 2px 2px 3px 0px #000000;
+			cursor: pointer;
+			transition: 0.25s;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+
+		&--label {
+			margin-top: 1vh;
+			font-size: 1.4rem;
+		}
+	}
+
+	&__info {
+		display: flex;
+		font-size: 1.4rem;
+
+		&--email {
+			margin-right: 0.5vw;
+
+			& .email-link {
+				color: #fff;
+			}
+		}
+
+		&--media {
+			& .media__icon {
+				margin-right: 0.7vw;
+
+				& svg {
+					transition: 0.2s;
+
+					&:hover {
+						transform: scale(1.2);
+					}
+				}
+			}
+		}
+	}
+}

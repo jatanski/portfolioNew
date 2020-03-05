@@ -1,0 +1,150 @@
+.projects {
+	min-height: 100vh;
+	display: flex;
+	color: rgba(255, 255, 255, 0.9);
+	background: #242627;
+	background: -moz-linear-gradient(100deg, #414345 0%, #242627 100%);
+	background: -webkit-linear-gradient(100deg, #414345 0%, #242627 100%);
+	background: linear-gradient(100deg, #414345 0%, #242627 100%);
+
+	&__leftSideWrap,
+	&__rightSideWrap {
+		width: 50vw;
+	}
+
+	&__title {
+		position: relative;
+		top: 30vh;
+		transform: translateY(-50%);
+		margin-left: 15vw;
+
+		& .title-admission {
+			font-size: 2rem;
+		}
+
+		& .title-name {
+			font-size: 4rem;
+			text-transform: uppercase;
+		}
+	}
+
+	&__main {
+		display: flex;
+		position: relative;
+		top: 40vh;
+		transform: translateY(-50%);
+		margin-left: 15vw;
+		width: 60%;
+
+		& .projects-main__myself,
+		& .projects-main__heckathon {
+			position: relative;
+
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: -8%;
+				top: 8%;
+				background-color: #fff;
+				height: 90%;
+				width: 2px;
+			}
+		}
+
+		& .element-title {
+			font-size: 2.2rem;
+			line-height: 160%;
+			text-transform: uppercase;
+		}
+
+		& .element-link {
+			font-size: 1.3em;
+			line-height: 170%;
+			margin-right: 5vw;
+			cursor: pointer;
+			transition: 0.3s;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__presentation {
+		background-color: #eee;
+		border-radius: 10px;
+		height: 50vh;
+		width: 40vw;
+		margin: 20vh 5vw;
+		box-shadow: 5px 5px 10px 5px #333;
+		transform: rotate3d();
+
+		& .presentation-header {
+			height: 8vh;
+			position: relative;
+			border-bottom: 1px solid darken($color: #4b75eb, $amount: 40%);
+			background-color: #4b75eb;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+
+			&__logo {
+				background-color: #eee;
+				position: absolute;
+				top: 50%;
+				left: 5%;
+				transform: translateY(-50%);
+				height: 5.5vh;
+				width: 5.5vh;
+				border-radius: 50%;
+
+				& svg {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: darken($color: #4b75eb, $amount: 15%);
+					font-size: 2.4rem;
+				}
+			}
+
+			&__title {
+				position: absolute;
+				top: 50%;
+				left: 25%;
+				transform: translateY(-50%);
+				font-size: 2rem;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+		}
+
+		& .presentation-main {
+			padding: 3vh 3vw 5vh;
+			height: 28vh;
+			display: flex;
+			&__description {
+				width: 50%;
+				color: #4b75eb;
+				font-size: 1.2rem;
+				line-height: 140%;
+				letter-spacing: 1px;
+			}
+
+			&__imageWrap {
+				position: relative;
+				left: 5%;
+				width: 43%;
+			}
+		}
+
+		& .presentation-footer {
+			height: 8vh;
+			position: relative;
+			border-top: 1px solid darken($color: #4b75eb, $amount: 40%);
+			background-color: #4b75eb;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+	}
+}

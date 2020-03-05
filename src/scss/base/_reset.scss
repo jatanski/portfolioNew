@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-weight: normal;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+}

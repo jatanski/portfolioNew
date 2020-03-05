@@ -1,0 +1,47 @@
+.header {
+	position: relative;
+	min-height: 100vh;
+	background: #ff4b2c;
+	background: -moz-linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
+	background: -webkit-linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
+	background: linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
+
+	&__textWrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 75%;
+		color: rgba(255, 255, 255, 0.9);
+		text-transform: uppercase;
+		letter-spacing: 4px;
+
+		&--name,
+		&--welcome {
+			display: inline;
+			text-align: justify;
+		}
+
+		&--cursor {
+			font-size: 3rem;
+			color: rgba(255, 255, 255, 0);
+
+			animation: cursor 1.4s 0.5s infinite;
+		}
+	}
+}
+
+@keyframes cursor {
+	0% {
+		color: rgba(255, 255, 255, 0);
+	}
+	40% {
+		color: rgba(255, 255, 255, 0);
+	}
+	50% {
+		color: rgba(255, 255, 255, 0.9);
+	}
+	90% {
+		color: rgba(255, 255, 255, 0.9);
+	}
+}

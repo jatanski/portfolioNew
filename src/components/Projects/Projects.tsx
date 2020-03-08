@@ -1,26 +1,22 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/display-name */
 import React, { useState, MouseEvent, useEffect } from "react";
-import "./projects.scss";
-import ProjectsList from "./Projects.list";
-import ProjectPresentation from "./Project.presentation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import ProjectImage from "./Project.image";
-import { projectsArraies } from "./projectsInfo";
-
-interface ActualProject {
-	title: string;
-	descriptionMain: string;
-	descriptionFeatures: Array<string>;
-	descriptionTechs: Array<string>;
-	codeLink: string;
-	demoLink: string;
-}
+import { ActualProject } from "./Projects.types";
+import { projectsArraies, startProject } from "./projectsInfo";
+import ProjectsView from "./Projects.view";
+import "./projects.scss";
 
 const Projects = () => {
 	const [title, setTitle] = useState("");
-	const [actualProject, setActualProject] = useState<ActualProject>();
+	const [actualProject, setActualProject] = useState<ActualProject>(startProject);
+	const [projectsClassName, setProjectsClassName] = useState("projects__opacity-wrap");
+	const [mainClassName, setMainClassName] = useState("projects__main");
+	const [titlePosition, setTitlePosition] = useState("translateX(0px)");
+	const [admissionPosition, setAdmissionPosition] = useState("translateX(0px)");
+
 	const presentationInfo = {
 		title: actualProject?.title,
 		descriptionMain: actualProject?.descriptionMain,
@@ -47,19 +43,41 @@ const Projects = () => {
 
 	const setActualTitle = (e: MouseEvent<HTMLLIElement>) => setTitle(e.currentTarget.id);
 
+	function showProjects() {
+		window.scrollY <= 1600 || window.scrollY >= 2800
+			? setProjectsClassName("projects__opacity-wrap")
+			: setProjectsClassName("projects__opacity-wrap show-projects-wrap");
+
+		window.scrollY <= 1600 || window.scrollY >= 2800
+			? setMainClassName("projects__main")
+			: setMainClassName("projects__main show-projects-main");
+	}
+
+	function changeTitlePosition() {
+		const actualNamePosition = `translateX(${window.pageYOffset / 16 - 100}px)`;
+		setTitlePosition(actualNamePosition);
+	}
+
+	function changeAdmissionPosition() {
+		const actualAdmissionPosition = `translateX(${100 - window.pageYOffset / 16}px)`;
+		setAdmissionPosition(actualAdmissionPosition);
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", showProjects);
+		window.addEventListener("scroll", changeTitlePosition);
+		window.addEventListener("scroll", changeAdmissionPosition);
+	});
+
 	return (
-		<section className="projects" id="projects">
-			<div className="projects__leftSideWrap">
-				<div className="projects__title">
-					<p className="title-admission">There are my</p>
-					<p className="title-name">projects</p>
-				</div>
-				<ProjectsList setActualTitle={setActualTitle} />
-			</div>
-			<div className="projects__rightSideWrap">
-				<ProjectPresentation {...presentationInfo} />
-			</div>
-		</section>
+		<ProjectsView
+			setActualTitle={setActualTitle}
+			presentationInfo={presentationInfo}
+			projectsClassName={projectsClassName}
+			mainClassName={mainClassName}
+			titlePosition={titlePosition}
+			admissionPosition={admissionPosition}
+		/>
 	);
 };
 

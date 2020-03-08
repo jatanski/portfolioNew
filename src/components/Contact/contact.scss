@@ -1,14 +1,17 @@
+@import "../../scss/abstracts/variables";
+
 .contact {
 	position: relative;
-	background: #ff4b2c;
-	background: -moz-linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
-	background: -webkit-linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
-	background: linear-gradient(100deg, #ff4b2c 0%, #37405d 100%);
+	background: $first-bgc-color;
+	background: -moz-linear-gradient(100deg, $first-bgc-color 0%, $second-bgc-color 100%);
+	background: -webkit-linear-gradient(100deg, $first-bgc-color 0%, $second-bgc-color 100%);
+	background: linear-gradient(100deg, $first-bgc-color 0%, $second-bgc-color 100%);
 	padding: 20vh 30vw;
-	color: rgba(255, 255, 255, 0.9);
+	color: $first-text-color;
+	opacity: 0;
+	transition: 1.2s;
 
 	&__title {
-		// text-transform: uppercase;
 		font-size: 6.5rem;
 	}
 
@@ -20,7 +23,7 @@
 		&--email,
 		&--message {
 			background-color: rgba(255, 255, 255, 0.1);
-			color: rgba(255, 255, 255, 0.7);
+			color: $first-text-color;
 			height: 55px;
 			vertical-align: middle;
 			padding: 0 10px;
@@ -28,7 +31,7 @@
 			font-size: 1rem;
 
 			&::placeholder {
-				color: rgba(255, 255, 255, 0.7);
+				color: $first-text-color;
 			}
 		}
 
@@ -37,7 +40,7 @@
 		}
 
 		&--button {
-			background-color: rgba(255, 255, 255, 0.9);
+			background-color: $first-text-color;
 			color: #555;
 			height: 55px;
 			vertical-align: middle;
@@ -45,7 +48,7 @@
 			margin-bottom: 1vh;
 			text-transform: uppercase;
 			font-size: 1.6rem;
-			box-shadow: 2px 2px 3px 0px #000000;
+			box-shadow: 2px 2px 3px 0px $second-text-color;
 			cursor: pointer;
 			transition: 0.25s;
 
@@ -68,7 +71,7 @@
 			margin-right: 0.5vw;
 
 			& .email-link {
-				color: #fff;
+				color: $first-text-color;
 			}
 		}
 
@@ -86,4 +89,9 @@
 			}
 		}
 	}
+}
+
+.showContact {
+	opacity: 1;
+	transition: 1.2s;
 }

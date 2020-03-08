@@ -1,11 +1,20 @@
+@import "../../scss/abstracts/variables";
+@import "../../scss/base/animations";
+
 .projects {
+	position: relative;
 	min-height: 100vh;
-	display: flex;
-	color: rgba(255, 255, 255, 0.9);
-	background: #242627;
-	background: -moz-linear-gradient(100deg, #414345 0%, #242627 100%);
-	background: -webkit-linear-gradient(100deg, #414345 0%, #242627 100%);
-	background: linear-gradient(100deg, #414345 0%, #242627 100%);
+	color: $first-text-color;
+	background: $fourth-bgc-color;
+	background: -moz-linear-gradient(100deg, $third-bgc-color 0%, $fourth-bgc-color 100%);
+	background: -webkit-linear-gradient(100deg, $third-bgc-color 0%, $fourth-bgc-color 100%);
+	background: linear-gradient(100deg, $third-bgc-color 0%, $fourth-bgc-color 100%);
+
+	&__opacity-wrap {
+		display: flex;
+		opacity: 0;
+		transition: 1.2s;
+	}
 
 	&__leftSideWrap,
 	&__rightSideWrap {
@@ -29,12 +38,12 @@
 	}
 
 	&__main {
-		display: flex;
 		position: relative;
 		top: 40vh;
-		transform: translateY(-50%);
-		margin-left: 15vw;
+		display: flex;
 		width: 60%;
+		margin-left: 15vw;
+		transform: translateY(-50%);
 
 		& .projects-main__myself,
 		& .projects-main__heckathon {
@@ -46,9 +55,9 @@
 				position: absolute;
 				left: -8%;
 				top: 8%;
-				background-color: #fff;
 				height: 90%;
 				width: 2px;
+				background-color: $fifth-bgc-color;
 			}
 		}
 
@@ -63,33 +72,54 @@
 			line-height: 170%;
 			margin-right: 5vw;
 			cursor: pointer;
-			transition: 0.3s;
 
-			&:hover {
-				text-decoration: underline;
+			&__text {
+				display: inline-block;
+				position: relative;
+
+				&::after,
+				&::before {
+					position: absolute;
+					display: block;
+					bottom: 0;
+					width: 0%;
+					height: 1px;
+					background-color: $fifth-bgc-color;
+					content: "";
+					transition: 0.3s;
+				}
+
+				&::before {
+					height: 2px;
+					transition: 0.5s;
+				}
+
+				&:hover::after,
+				&:hover::before {
+					width: 100%;
+				}
 			}
 		}
 	}
 
 	&__presentation {
-		background-color: #eee;
+		background-color: $fifth-bgc-color;
 		border-radius: 10px;
-		height: 50vh;
-		width: 40vw;
-		margin: 20vh 5vw;
+		height: 55vh;
+		width: 45vw;
+		margin: 20vh 0vw;
 		box-shadow: 5px 5px 10px 5px #333;
-		transform: rotate3d();
 
 		& .presentation-header {
 			height: 8vh;
 			position: relative;
-			border-bottom: 1px solid darken($color: #4b75eb, $amount: 40%);
-			background-color: #4b75eb;
+			border-bottom: 1px solid darken($color: $presentation-second-bgc-color, $amount: 40%);
+			background-color: $presentation-second-bgc-color;
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
 
 			&__logo {
-				background-color: #eee;
+				background-color: $fifth-bgc-color;
 				position: absolute;
 				top: 50%;
 				left: 5%;
@@ -103,7 +133,7 @@
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
-					color: darken($color: #4b75eb, $amount: 15%);
+					color: darken($color: $presentation-second-bgc-color, $amount: 15%);
 					font-size: 2.4rem;
 				}
 			}
@@ -111,9 +141,9 @@
 			&__title {
 				position: absolute;
 				top: 50%;
-				left: 25%;
-				transform: translateY(-50%);
-				font-size: 2rem;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 1.8rem;
 				text-transform: uppercase;
 				letter-spacing: 3px;
 			}
@@ -121,30 +151,130 @@
 
 		& .presentation-main {
 			padding: 3vh 3vw 5vh;
-			height: 28vh;
+			height: 33vh;
 			display: flex;
+
 			&__description {
 				width: 50%;
-				color: #4b75eb;
+				color: $second-text-color;
 				font-size: 1.2rem;
-				line-height: 140%;
+				line-height: 130%;
 				letter-spacing: 1px;
+				margin-right: 2vw;
+
+				.presentation-desc-main {
+					margin-bottom: 2vh;
+				}
+
+				.presentation-desc-features {
+					margin-bottom: 2vh;
+
+					& svg {
+						font-size: 0.8rem;
+						margin-right: 8px;
+					}
+				}
 			}
 
 			&__imageWrap {
 				position: relative;
-				left: 5%;
-				width: 43%;
+				top: 8%;
+				width: 70%;
+
+				& .image-project {
+					position: absolute;
+					width: 100%;
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+					& img {
+						max-width: 100%;
+						border-radius: 5px;
+					}
+				}
 			}
 		}
 
 		& .presentation-footer {
 			height: 8vh;
 			position: relative;
-			border-top: 1px solid darken($color: #4b75eb, $amount: 40%);
-			background-color: #4b75eb;
+			border-top: 1px solid darken($color: $presentation-second-bgc-color, $amount: 40%);
+			background-color: $presentation-second-bgc-color;
 			border-bottom-left-radius: 10px;
 			border-bottom-right-radius: 10px;
+
+			&__wrap {
+				height: 100%;
+				width: 50%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				font-size: 1.8rem;
+
+				&--link {
+					display: flex;
+					justify-content: space-around;
+					width: 35%;
+
+					& a {
+						color: $first-text-color;
+					}
+				}
+			}
 		}
 	}
+}
+
+.show-projects-wrap {
+	opacity: 1;
+	transition: 1.2s;
+}
+
+.element-link.element-show {
+	&--0 {
+		transform: translateY(15vh);
+		opacity: 0;
+		transition: 0.8s;
+	}
+
+	&--1 {
+		transform: translateY(15vh);
+		opacity: 0;
+		transition: 0.8s 0.5s;
+	}
+
+	&--2 {
+		transform: translateY(15vh);
+		opacity: 0;
+		transition: 0.8s 1s;
+	}
+
+	&--3 {
+		transform: translateY(15vh);
+		opacity: 0;
+		transition: 0.8s 1.5s;
+	}
+}
+
+.show-projects-main .element-show {
+	&--0,
+	&--1,
+	&--2,
+	&--3 {
+		opacity: 1;
+		transform: translateY(0vh);
+	}
+}
+
+.img-proj-0 {
+	opacity: 1;
+	animation: imgProjectSliderFirstImg 10s infinite both;
+}
+
+.img-proj-1 {
+	opacity: 0;
+	animation: imgProjectSliderOthersImg 10s 2s infinite both;
+}
+.img-proj-2 {
+	opacity: 0;
+	animation: imgProjectSliderOthersImg 10s 5.3s infinite both;
 }

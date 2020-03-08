@@ -1,40 +1,34 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
-import React, { MouseEvent, SFC } from "react";
+import React, { SFC } from "react";
 import { projectsArraies } from "./projectsInfo";
+import { ProjectsListInput } from "./Projects.types";
 
-interface ProjectsListInput {
-	setActualTitle: (e: MouseEvent<HTMLLIElement>) => void;
-}
-
-const ProjectsList: SFC<ProjectsListInput> = ({ setActualTitle }) => {
+const ProjectsList: SFC<ProjectsListInput> = ({ setActualTitle, mainClassName }) => {
 	return (
-		<div className="projects__main">
+		<div className={mainClassName}>
 			<ul className="projects-main__myself">
 				<li className="projects-main__myself--title element-title">Myself</li>
-				{projectsArraies.myself.map(({ title }) => (
-					<li
-						onClick={setActualTitle}
-						id={title}
-						key={title}
-						className="projects-main__myself--element element-link"
-					>
-						{title}
-					</li>
-				))}
+				{projectsArraies.myself.map(({ title }, i) => {
+					const className = `projects-main__myself--element element-link element-show--${i}`;
+					return (
+						<li onClick={setActualTitle} id={title} key={title} className={className}>
+							<p className="element-link__text">{title}</p>
+						</li>
+					);
+				})}
 			</ul>
 			<ul className="projects-main__heckathon">
 				<li className="projects-main__heckathon--title element-title">With friends</li>
-				{projectsArraies.withFriends.map(({ title }) => (
-					<li
-						onClick={setActualTitle}
-						id={title}
-						key={title}
-						className="projects-main__myself--element element-link"
-					>
-						{title}
-					</li>
-				))}
+				{projectsArraies.withFriends.map(({ title }, i) => {
+					const className = `projects-main__myself--element element-link element-show--${i}`;
+
+					return (
+						<li onClick={setActualTitle} id={title} key={title} className={className}>
+							<p className="element-link__text">{title}</p>
+						</li>
+					);
+				})}
 			</ul>
 		</div>
 	);

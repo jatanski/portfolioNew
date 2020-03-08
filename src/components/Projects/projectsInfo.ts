@@ -1,3 +1,5 @@
+import { ActualProject } from "./Projects.types";
+
 export const projects = {
 	familyAlbum: {
 		title: "Family Album",
@@ -142,4 +144,17 @@ export const projectsArraies = {
 			demoLink: "https://github.com/jatanski/gift-from-dog",
 		},
 	],
+};
+
+export const startProject: ActualProject = {
+	title: "Family Album",
+	descriptionMain: "Bardzo fajny projekt, który zrobiłem z braciszkiem.",
+	descriptionFeatures: [
+		"Dodawanie foteczek piesków.",
+		"Przeglądanie foteczek piesków.",
+		"Tworzenie albumów na wyjątkowe okazje.",
+	],
+	descriptionTechs: ["React", "Node", "TypeScript"],
+	codeLink: "",
+	demoLink: "",
 };

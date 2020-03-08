@@ -15,11 +15,28 @@ body {
 	}
 
 	h2 {
-		font-size: 3.4rem;
+		font-size: 3.2rem;
 	}
 
 	i,
 	svg {
 		cursor: pointer;
+	}
+}
+
+.scrollWrap {
+	position: absolute;
+	bottom: 2vh;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	width: 11.5vw;
+	justify-content: space-between;
+	font-size: 1.2rem;
+
+	&--icon {
+		color: #fff;
+		position: relative;
+		animation: animateArrow 3s infinite;
 	}
 }

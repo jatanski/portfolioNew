@@ -1,30 +1,39 @@
-import React from "react";
+/* eslint-disable no-undef */
+import React, { useState, useEffect } from "react";
 import "./about.scss";
-import MeImage from "./MeImage";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeartBroken } from "@fortawesome/free-solid-svg-icons";
+import AboutView from "./About.view";
 
 const About = () => {
+	const [aboutClass, setAboutClass] = useState("about");
+	const [namePosition, setNamePosition] = useState("translateX(0px)");
+	const [admissionPosition, setAdmissionPosition] = useState("translateX(0px)");
+
+	function showAbout() {
+		window.scrollY <= 500 || window.scrollY >= 1800 ? setAboutClass("about") : setAboutClass("about showAbout");
+	}
+
+	function changeNamePosition() {
+		const actualNamePosition = `translateX(${window.pageYOffset / 8 - 100}px)`;
+		setNamePosition(actualNamePosition);
+	}
+
+	function changeAdmissionPosition() {
+		const actualAdmissionPosition = `translateX(${100 - window.pageYOffset / 8}px)`;
+		setAdmissionPosition(actualAdmissionPosition);
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", showAbout);
+		window.addEventListener("scroll", changeNamePosition);
+		window.addEventListener("scroll", changeAdmissionPosition);
+	});
+
 	return (
-		<section className="about" id="about">
-			<div className="about__text">
-				<div className="about__text--header">
-					<p className="header-admission">Hi, my name is</p>
-					<p className="header-name">
-						Tanski. James Tanski <FontAwesomeIcon color="red" icon={faHeartBroken} />
-					</p>
-					<p className="header-description">
-						"Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten Bonapart figurka! Bez
-						Suworowa to mówiąc, że odgłos trąbki i Bernatowicze, Kupść, Gedymin i ziemię kochaną i palestra,
-						i opisuję, bo tak Suwarów w tym kończy się, że w Ulm, w pół kroku Tak każe przyzwoitość). nikt
-						mężczyzn."
-					</p>
-				</div>
-			</div>
-			<div className="about__image">
-				<MeImage />
-			</div>
-		</section>
+		<AboutView
+			aboutClassName={aboutClass}
+			headerNameTransformStyle={namePosition}
+			admissionPosition={admissionPosition}
+		/>
 	);
 };
 

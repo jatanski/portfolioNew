@@ -1,12 +1,20 @@
+@import "../../scss/abstracts/variables";
+
 .menu {
-	position: fixed;
-	z-index: 100;
+	&__nav-wrap {
+		position: fixed;
+		z-index: 0;
+		transition: 0.7s ease;
+	}
 
 	&__nav {
+		opacity: 0;
 		width: 100vw;
-		height: 100vh;
-		position: relative;
+		min-height: 100vh;
+		position: absolute;
 		z-index: 2;
+		transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -28,15 +36,16 @@
 			font-size: 3rem;
 			letter-spacing: 5px;
 			line-height: 150%;
-			color: rgba(0, 0, 0, 0.8);
+			color: $second-text-color;
 
 			&__element {
 				cursor: pointer;
 
-				& a {
+				& p {
+					transition: 0.3s;
 					&:hover {
-						transition: 0.3s;
-						color: #ff4b2c;
+						transform: scale(1.2);
+						color: $first-bgc-color;
 					}
 				}
 			}
@@ -55,7 +64,7 @@
 	bottom: 5vh;
 	left: 5vw;
 	font-size: 2rem;
-	color: rgba(0, 0, 0, 0.8);
+	color: $second-text-color;
 
 	& svg {
 		margin-left: 1vw;
@@ -63,7 +72,7 @@
 
 		&:hover {
 			transform: scale(1.1);
-			color: #ff4b2c;
+			color: $first-bgc-color;
 		}
 	}
 }
@@ -78,7 +87,8 @@
 		transition: 0.3s;
 
 		&:hover {
-			color: #ff4b2c;
+			transform: scale(1.1);
+			color: $first-bgc-color;
 		}
 	}
 }
@@ -97,11 +107,38 @@
 	position: absolute;
 	top: 5vh;
 	left: 5vh;
+	z-index: 10;
+}
+
+.menu__open {
+	position: fixed;
+	opacity: 1;
+	transform: scale(1);
+	transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	z-index: 10;
+}
+
+.menu-open-hidden {
+	opacity: 0;
+	transform: scale(0);
+	transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .nav__close {
 	transition: 0.2s;
 	&:hover {
-		color: #ff4b2c;
+		transform: scale(1.1);
+		color: $first-bgc-color;
 	}
+}
+
+.nav-visible {
+	opacity: 1;
+	transition: 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.show-nav-wrap {
+	z-index: 100;
+	height: 100vh;
+	transition: 0.7s ease;
 }

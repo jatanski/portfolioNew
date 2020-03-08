@@ -1,6 +1,10 @@
+@import "../../scss/abstracts/variables";
+
 .about {
 	min-height: 100vh;
 	position: relative;
+	opacity: 0;
+	transition: 1.2s;
 
 	&__text {
 		&--header {
@@ -37,4 +41,16 @@
 		width: 20vw;
 		height: 20vw;
 	}
+
+	&__scrollWrap .scrollWrap {
+		width: 9vw;
+		&--icon {
+			color: $second-text-color;
+		}
+	}
+}
+
+.showAbout {
+	opacity: 1;
+	transition: 1.2s;
 }

@@ -3,7 +3,11 @@
 import React, { ReactNode, SFC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+
+import Img1 from "../../images/photo-0.jpg";
+import Img2 from "../../images/photo-2.jpg";
+import Img3 from "../../images/photo-3.jpg";
 
 interface ProjectPresentationInput {
 	childrenLogoIcon: ReactNode;
@@ -31,7 +35,7 @@ const ProjectPresentation: SFC<ProjectPresentationInput> = ({
 			<div className="presentation-header">
 				<div className="presentation-header__logo">{childrenLogoIcon}</div>
 				<div className="presentation-header__title">
-					<h3>Project: {title}</h3>
+					<h3>{title}</h3>
 				</div>
 			</div>
 			<div className="presentation-main">
@@ -42,30 +46,50 @@ const ProjectPresentation: SFC<ProjectPresentationInput> = ({
 							<span>Features: </span>
 							<ul>
 								{descriptionFeatures?.map(feature => (
-									<li key={feature}>{feature}</li>
+									<li key={feature}>
+										<FontAwesomeIcon icon={faChevronCircleRight} />
+										{feature}
+									</li>
 								))}
 							</ul>
 						</div>
-						<p className="presentation-desc-technologies">
+						<div className="presentation-desc-technologies">
 							<span>Technologies:</span>
 							<ul>
 								{descriptionTechs?.map(tech => (
-									<li key={tech}>{tech}</li>
+									<li key={tech}> {tech}</li>
 								))}
 							</ul>
-						</p>
+						</div>
 					</div>
 				</div>
-				<div className="presentation-main__imageWrap">{childrenImageIcon}</div>
+				<div className="presentation-main__imageWrap">
+					<div className="image-project img-proj-0">
+						<img src={Img1} alt="" />
+					</div>
+					<div className="image-project img-proj-1">
+						<img src={Img2} alt="" />
+					</div>
+					<div className="image-project img-proj-2">
+						<img src={Img3} alt="" />
+					</div>
+				</div>
 			</div>
 			<div className="presentation-footer">
-				<a target="_blank" href={codeLink}>
-					Demo: <FontAwesomeIcon icon={faGithubSquare} />
-				</a>
-				<a target="_blank" href={demoLink}>
-					Kod: <FontAwesomeIcon icon={faLaptopCode} />
-				</a>
-				<p></p>
+				<div className="presentation-footer__wrap">
+					<div className="presentation-footer__wrap--link">
+						Demo:
+						<a target="_blank" href={codeLink}>
+							<FontAwesomeIcon icon={faGithubSquare} />
+						</a>
+					</div>
+					<div className="presentation-footer__wrap--link">
+						Kod:
+						<a target="_blank" href={demoLink}>
+							<FontAwesomeIcon icon={faLaptopCode} />
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

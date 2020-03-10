@@ -1,34 +1,34 @@
-import familyAlbum1 from "../../images/projects/familyAlbum/photo-0.jpg";
-import familyAlbum2 from "../../images/projects/familyAlbum/photo-1.jpg";
-import familyAlbum3 from "../../images/projects/familyAlbum/photo-2.jpg";
+import familyAlbum1 from "../../../images/projects/familyAlbum/photo-0.jpg";
+import familyAlbum2 from "../../../images/projects/familyAlbum/photo-1.jpg";
+import familyAlbum3 from "../../../images/projects/familyAlbum/photo-2.jpg";
 
-import masterOfSport1 from "../../images/projects/masterOfSport/master1.jpg";
-import masterOfSport2 from "../../images/projects/masterOfSport/master2.jpg";
-import masterOfSport3 from "../../images/projects/masterOfSport/master3.jpg";
+import masterOfSport1 from "../../../images/projects/masterOfSport/master1.jpg";
+import masterOfSport2 from "../../../images/projects/masterOfSport/master2.jpg";
+import masterOfSport3 from "../../../images/projects/masterOfSport/master3.jpg";
 
-import commisionImage1 from "../../images/projects/commisionRefundPage/commisionImage1.jpg";
-import commisionImage2 from "../../images/projects/commisionRefundPage/commisionImage2.jpg";
-import commisionImage3 from "../../images/projects/commisionRefundPage/commisionImage3.jpg";
+import commisionImage1 from "../../../images/projects/commisionRefundPage/commisionImage1.jpg";
+import commisionImage2 from "../../../images/projects/commisionRefundPage/commisionImage2.jpg";
+import commisionImage3 from "../../../images/projects/commisionRefundPage/commisionImage3.jpg";
 
-import englishImage1 from "../../images/projects/englishApp/englishImage1.jpg";
-import englishImage2 from "../../images/projects/englishApp/englishImage2.jpg";
-import englishImage3 from "../../images/projects/englishApp/englishImage3.jpg";
+import englishImage1 from "../../../images/projects/englishApp/englishImage1.jpg";
+import englishImage2 from "../../../images/projects/englishApp/englishImage2.jpg";
+import englishImage3 from "../../../images/projects/englishApp/englishImage3.jpg";
 
-import optimizeImage1 from "../../images/projects/optimizeApp/optimizeImg1.jpg";
-import optimizeImage2 from "../../images/projects/optimizeApp/optimizeImg2.jpg";
-import optimizeImage3 from "../../images/projects/optimizeApp/optimizeImg3.jpg";
+import optimizeImage1 from "../../../images/projects/optimizeApp/optimizeImg1.jpg";
+import optimizeImage2 from "../../../images/projects/optimizeApp/optimizeImg2.jpg";
+import optimizeImage3 from "../../../images/projects/optimizeApp/optimizeImg3.jpg";
 
-import chatImg1 from "../../images/projects/lifeChat/lifeChat1.jpg";
-import chatImg2 from "../../images/projects/lifeChat/lifeChat2.jpg";
-import chatImg3 from "../../images/projects/lifeChat/lifeChat3.jpg";
+import chatImg1 from "../../../images/projects/lifeChat/lifeChat1.jpg";
+import chatImg2 from "../../../images/projects/lifeChat/lifeChat2.jpg";
+import chatImg3 from "../../../images/projects/lifeChat/lifeChat3.jpg";
 
-import owlImg1 from "../../images/projects/owl/owlImg1.jpg";
-import owlImg2 from "../../images/projects/owl/owlImg2.jpg";
-import owlImg3 from "../../images/projects/owl/owlImg3.jpg";
+import owlImg1 from "../../../images/projects/owl/owlImg1.jpg";
+import owlImg2 from "../../../images/projects/owl/owlImg2.jpg";
+import owlImg3 from "../../../images/projects/owl/owlImg3.jpg";
 
-import codersImg1 from "../../images/projects/codersBoard/codersImg1.jpg";
-import codersImg2 from "../../images/projects/codersBoard/codersImg2.jpg";
-import codersImg3 from "../../images/projects/codersBoard/codersImg3.jpg";
+import codersImg1 from "../../../images/projects/codersBoard/codersImg1.jpg";
+import codersImg2 from "../../../images/projects/codersBoard/codersImg2.jpg";
+import codersImg3 from "../../../images/projects/codersBoard/codersImg3.jpg";
 
 export const projects = {
 	familyAlbum: {

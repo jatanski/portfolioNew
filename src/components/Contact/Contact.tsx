@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, MouseEvent } from "react";
 import "./contact.scss";
 import ContactView from "./Contact.view";
 
@@ -10,10 +10,14 @@ const Contact = () => {
 		window.scrollY <= 2100 ? setContactClass("contact") : setContactClass("contact showContact");
 	}
 
+	const sendMessage = (e: MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+	};
+
 	useEffect(() => {
 		window.addEventListener("scroll", showContact);
 	});
-	return <ContactView contactClass={contactClass} />;
+	return <ContactView contactClass={contactClass} sendMessage={sendMessage} />;
 };
 
 export default Contact;

@@ -5,13 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faLaptopCode, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 
-import Img1 from "../../images/photo-0.jpg";
-import Img2 from "../../images/photo-2.jpg";
-import Img3 from "../../images/photo-3.jpg";
-
 interface ProjectPresentationInput {
 	childrenLogoIcon: ReactNode;
-	childrenImageIcon: ReactNode;
 	title?: string;
 	descriptionMain?: string;
 	descriptionFeatures?: Array<string>;
@@ -22,7 +17,6 @@ interface ProjectPresentationInput {
 
 const ProjectPresentation: SFC<ProjectPresentationInput> = ({
 	childrenLogoIcon,
-	childrenImageIcon,
 	title,
 	descriptionFeatures,
 	descriptionMain,
@@ -64,7 +58,7 @@ const ProjectPresentation: SFC<ProjectPresentationInput> = ({
 					</div>
 				</div>
 				<div className="presentation-main__imageWrap">
-					<div className="image-project img-proj-0">
+					{/* <div className="image-project img-proj-0">
 						<img src={Img1} alt="" />
 					</div>
 					<div className="image-project img-proj-1">
@@ -72,7 +66,7 @@ const ProjectPresentation: SFC<ProjectPresentationInput> = ({
 					</div>
 					<div className="image-project img-proj-2">
 						<img src={Img3} alt="" />
-					</div>
+					</div> */}
 				</div>
 			</div>
 			<div className="presentation-footer">

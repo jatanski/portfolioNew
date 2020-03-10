@@ -1,13 +1,11 @@
 /* eslint-disable no-undef */
-/* eslint-disable react/display-name */
 import React, { useState, MouseEvent, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import ProjectImage from "./Project.image";
-import { ActualProject } from "./Projects.types";
-import { projectsArraies, startProject } from "./projectsInfo";
+import { ActualProject } from "./ProjectsLogic/Projects.types";
+import { startProject } from "./ProjectsLogic/projectsInfo";
 import ProjectsView from "./Projects.view";
-import "./projects.scss";
+import "./projects2.scss";
+import ProjectsHooks from "./ProjectsLogic/Project.hooks";
+import ProjectHooks from "./ProjectsLogic/Project.hooks";
 
 const Projects = () => {
 	const [title, setTitle] = useState("");
@@ -24,44 +22,23 @@ const Projects = () => {
 		descriptionTechs: actualProject?.descriptionTechs,
 		codeLink: actualProject?.codeLink,
 		demoLink: actualProject?.demoLink,
-		childrenImageIcon: <ProjectImage />,
-		childrenLogoIcon: <FontAwesomeIcon icon={faInstagram} />,
-		images: actualProject.images,
+		images: actualProject?.images,
 	};
 
-	function setActualProjectToPresentation() {
-		const actualProjectMySelf = projectsArraies.myself.find(({ title: titleProject }) => titleProject === title);
-
-		const actualProjectWithFriends = projectsArraies.withFriends.find(
-			({ title: titleProject }) => titleProject === title
-		);
-
-		const actualProject = actualProjectMySelf || actualProjectWithFriends;
-		if (actualProject) setActualProject(actualProject);
-	}
-
-	useEffect(() => setActualProjectToPresentation(), [title]);
+	useEffect(() => ProjectHooks.useSetActualProjectToPresentation(title, setActualProject), [title]);
 
 	const setActualTitle = (e: MouseEvent<HTMLLIElement>) => setTitle(e.currentTarget.id);
 
 	function showProjects() {
-		window.scrollY <= 1600 || window.scrollY >= 2800
-			? setProjectsClassName("projects__opacity-wrap")
-			: setProjectsClassName("projects__opacity-wrap show-projects-wrap");
-
-		window.scrollY <= 1600 || window.scrollY >= 2800
-			? setMainClassName("projects__main")
-			: setMainClassName("projects__main show-projects-main");
+		ProjectsHooks.useShowProjects(setProjectsClassName, setMainClassName);
 	}
 
 	function changeTitlePosition() {
-		const actualNamePosition = `translateX(${window.pageYOffset / 16 - 100}px)`;
-		setTitlePosition(actualNamePosition);
+		ProjectsHooks.useChangeTitlePosition(setTitlePosition);
 	}
 
 	function changeAdmissionPosition() {
-		const actualAdmissionPosition = `translateX(${100 - window.pageYOffset / 16}px)`;
-		setAdmissionPosition(actualAdmissionPosition);
+		ProjectsHooks.useChangeAdmissionPosition(setAdmissionPosition);
 	}
 
 	useEffect(() => {

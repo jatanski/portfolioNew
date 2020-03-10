@@ -20,6 +20,13 @@ export interface ProjectsViewInput {
 	admissionPosition: string;
 }
 
+export interface ProjectsLeftSideInput {
+	admissionPosition: string;
+	titlePosition: string;
+	mainClassName: string;
+	setActualTitle: (e: MouseEvent<HTMLLIElement>) => void;
+}
+
 interface PresentationInfo {
 	title?: string;
 	descriptionMain?: string;
@@ -27,8 +34,6 @@ interface PresentationInfo {
 	descriptionTechs?: Array<string>;
 	codeLink?: string;
 	demoLink?: string;
-	childrenImageIcon: JSX.Element;
-	childrenLogoIcon: JSX.Element;
 }
 
 export interface ProjectsListInput {

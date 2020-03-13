@@ -16,8 +16,8 @@ const HeaverView: SFC<HeaderViewInput> = ({ actualHelloText, actualNameText }) =
 			<span className="header__textWrap--cursor">|</span>
 			<p className="header__textWrap--action">Link with your customers today! 🤑</p>
 		</div>
-		<div className="header__scrollWrap">
-			<a href="#about" className="header__scrollWrap--icon">
+		<div className="scrollWrap">
+			<a href="#about" className="scrollWrap--icon">
 				<FontAwesomeIcon icon={faChevronDown} />
 			</a>
 			<p>Scroll down and meet me!</p>

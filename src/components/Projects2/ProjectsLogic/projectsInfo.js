@@ -1,18 +1,22 @@
-import familyAlbum1 from "../../../images/projects/familyAlbum/photo-0.jpg";
-import familyAlbum2 from "../../../images/projects/familyAlbum/photo-1.jpg";
-import familyAlbum3 from "../../../images/projects/familyAlbum/photo-2.jpg";
+import businessCardImg1 from "../../../images/projects/businessCard/businness-card-1.jpg";
+import businessCardImg2 from "../../../images/projects/businessCard/businness-card-2.jpg";
+import businessCardImg3 from "../../../images/projects/businessCard/businness-card-3.jpg";
 
-import masterOfSport1 from "../../../images/projects/masterOfSport/master1.jpg";
-import masterOfSport2 from "../../../images/projects/masterOfSport/master2.jpg";
-import masterOfSport3 from "../../../images/projects/masterOfSport/master3.jpg";
+import commisionImage1 from "../../../images/projects/commisionRefundPage/commision-img1.jpg";
+import commisionImage2 from "../../../images/projects/commisionRefundPage/commision-img2.jpg";
+import commisionImage3 from "../../../images/projects/commisionRefundPage/commision-img3.jpg";
 
-import commisionImage1 from "../../../images/projects/commisionRefundPage/commisionImage1.jpg";
-import commisionImage2 from "../../../images/projects/commisionRefundPage/commisionImage2.jpg";
-import commisionImage3 from "../../../images/projects/commisionRefundPage/commisionImage3.jpg";
+import masterOfSport1 from "../../../images/projects/masterOfSport/master-img1.jpg";
+import masterOfSport2 from "../../../images/projects/masterOfSport/master-img2.jpg";
+import masterOfSport3 from "../../../images/projects/masterOfSport/master-img3.jpg";
 
 import englishImage1 from "../../../images/projects/englishApp/englishImage1.jpg";
 import englishImage2 from "../../../images/projects/englishApp/englishImage2.jpg";
 import englishImage3 from "../../../images/projects/englishApp/englishImage3.jpg";
+
+import familyAlbum1 from "../../../images/projects/familyAlbum/photo-0.jpg";
+import familyAlbum2 from "../../../images/projects/familyAlbum/photo-1.jpg";
+import familyAlbum3 from "../../../images/projects/familyAlbum/photo-2.jpg";
 
 import optimizeImage1 from "../../../images/projects/optimizeApp/optimizeImg1.jpg";
 import optimizeImage2 from "../../../images/projects/optimizeApp/optimizeImg2.jpg";
@@ -22,169 +26,108 @@ import chatImg1 from "../../../images/projects/lifeChat/lifeChat1.jpg";
 import chatImg2 from "../../../images/projects/lifeChat/lifeChat2.jpg";
 import chatImg3 from "../../../images/projects/lifeChat/lifeChat3.jpg";
 
-import owlImg1 from "../../../images/projects/owl/owlImg1.jpg";
-import owlImg2 from "../../../images/projects/owl/owlImg2.jpg";
-import owlImg3 from "../../../images/projects/owl/owlImg3.jpg";
-
 import codersImg1 from "../../../images/projects/codersBoard/codersImg1.jpg";
 import codersImg2 from "../../../images/projects/codersBoard/codersImg2.jpg";
 import codersImg3 from "../../../images/projects/codersBoard/codersImg3.jpg";
 
-export const projects = {
-	familyAlbum: {
-		title: "Family Album",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [familyAlbum1, familyAlbum2, familyAlbum3],
-	},
-	commisionRefundPage: {
-		title: "Commision refung page",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [commisionImage1, commisionImage2, commisionImage3],
-	},
-	masterOfSport: {
-		title: "Master of sport",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [masterOfSport1, masterOfSport2, masterOfSport3],
-	},
-	englishStickApp: {
-		title: "English Sticky App",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [englishImage1, englishImage2, englishImage3],
-	},
-	optimizeApp: {
-		title: "Optimize App",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [optimizeImage1, optimizeImage2, optimizeImage3],
-	},
-	lifeChat: {
-		title: "Life Chat",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [chatImg1, chatImg2, chatImg3],
-	},
-	owlLearningPortal: {
-		title: "OWL Learning Portal",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [owlImg1, owlImg2, owlImg3],
-	},
-	codersBoard: {
-		title: "CodersBoard",
-		descriptionMain: "Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-		descriptionFeatures: ["Dodawanie zdjęć"],
-		descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-		codeLink: "https://github.com/jatanski/gift-from-dog",
-		demoLink: "https://github.com/jatanski/gift-from-dog",
-		images: [codersImg1, codersImg2, codersImg3],
-	},
-};
-
 export const projectsArraies = {
 	myself: [
 		{
-			title: "Family Album",
-			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
-			images: [familyAlbum1, familyAlbum2, familyAlbum3],
+			title: "Businness Card",
+			descriptionMain: "Moja strona wizytówka",
+			descriptionFeatures: ["Formularz kontaktowy"],
+			descriptionTechs: ["TypeScript", "Gatsby", "Sass", "React"],
+			codeLink: "https://github.com/jatanski/portfolioNew",
+			demoLink: "https://jatanski.github.io/portfolioNew",
+			images: [businessCardImg1, businessCardImg2, businessCardImg3],
 		},
 		{
 			title: "Commision refung page",
-			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
+			descriptionMain: "Landing page wykonany na zlecenie.",
+			descriptionFeatures: ["Strona typu one-page", "Formularz kontaktowy"],
 			descriptionTechs: ["TypeScript", "Gatsby", "Sass", "React"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
+			codeLink: "https://github.com/jatanski/commisionRefund",
+			demoLink: "https://odzyskamytwojaprowizje.pl/",
 			images: [commisionImage1, commisionImage2, commisionImage3],
 		},
+
 		{
 			title: "Master of sport",
 			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
+				"Pierwsza moja większa aplikacja napisana do nauki reacta oraz node.js. Jest to dziennik treningowy oraz żywieniowy dla sportowców.",
+			descriptionFeatures: [
+				"Tworzenie planów treningowych i żyweniowych",
+				"Prowadzenie dziennika treningowego",
+				"Monitorowanie postępów",
+				"Kalkulator BMI",
+			],
+			descriptionTechs: ["JavaScript", "MongoDB", "Express", "React + Redux"],
+			codeLink: "https://github.com/jatanski/master-of-sport",
+			demoLink: "https://master-sportman.herokuapp.com/",
 			images: [masterOfSport1, masterOfSport2, masterOfSport3],
 		},
 		{
 			title: "English Sticky App",
-			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
+			descriptionMain: "Aplikacja w trakcie tworzenia. Będzie to aplikacja do nauki słownictwa obcego.",
+			descriptionFeatures: [
+				"Tworzenie list słówek wraz z opisem, zdjęciem i audio",
+				"Nauka systemem fiszek",
+				"Udostępnianie list słówek",
+				"Rozszerzenie do google do zapisanywania słówek ze stron internetowych",
+			],
+			descriptionTechs: ["TypeScript", "GraphQL", "Prisma", "React + Redux", "PostreSQL"],
+			codeLink: "https://github.com/jatanski/EnglishApp",
+			demoLink: "https://github.com/jatanski/EnglishApp",
 			images: [englishImage1, englishImage2, englishImage3],
 		},
 	],
 	withFriends: [
 		{
-			title: "Optimize App",
+			title: "Family Album",
 			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
+				"Aplikacja wykonana jako prezent świąteczny dla rodziców razem z moim bratem. Jest to album",
+			descriptionFeatures: [
+				"Tworzenie albumów ze zdjęciami wraz z opisami i datami wykonamia",
+				"Udostępnianie albumów innym członkom rodziny",
+				"Oglądanie zdjęć",
+			],
+			descriptionTechs: ["React", "Node", "TypeScript", "Express", "MongoDB"],
+			codeLink: "https://github.com/jatanski/family-album",
+			demoLink: "https://github.com/jatanski/family-album",
+			images: [familyAlbum1, familyAlbum2, familyAlbum3],
+		},
+		{
+			title: "Optimize App",
+			descriptionMain: `Aplikacja do dawania feedbacku w zespołach projektowych. Powstała podczas heckathonu na zakończenie kursu "CodersCamp - edycja IV" i zajęła II miejsce.`,
+			descriptionFeatures: [
+				"Tworzenie konta połączonego ze slackiem",
+				"Tworzenie zapytań do zespołu",
+				"Dawanie feedbacku",
+				"Powiadomienia chrome oraz na połączonych kanałach na slacku",
+			],
+			descriptionTechs: ["JavaScript", "MongoDB", "Express", "React + Redux"],
+			codeLink: "https://github.com/jatanski/Optimize",
+			demoLink: "https://github.com/jatanski/Optimize",
 			images: [optimizeImage1, optimizeImage2, optimizeImage3],
 		},
 		{
 			title: "LifeChat",
-			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
+			descriptionMain: `Aplikacja ułatwiajaca pracę i odstresowująca dla osób pracujących na czatach internetowych. Powstała podczas Heckathonu na zakończenie kursu "CodersCamp - edycja III" i zajęła III miejsce.`,
+			descriptionFeatures: [
+				"Dwustronny czat w czasie rzeczywistym oparty o web sockety",
+				"Wykorzystując słowa kluczowe w swoim odpowiedziach pracownik czatu zbiera punkty, które potem może wymieniać na nagrody",
+			],
+			descriptionTechs: ["JavaScript", "MongoDB", "Express", "React + Redux", "WebSocket"],
+			codeLink: "https://github.com/jatanski/LifeChat",
+			demoLink: "https://github.com/jatanski/LifeChat",
 			images: [chatImg1, chatImg2, chatImg3],
 		},
-		{
-			title: "OWL Learning Portal",
-			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
-			images: [owlImg1, owlImg2, owlImg3],
-		},
+
 		{
 			title: "Coders Board",
-			descriptionMain:
-				"Aplikacja stworzona jako prezent bożonarodzeniowy dla rodziców. Jest to album na zdjęcia.",
+			descriptionMain: "Aplikacja tworzona w stowarzyszeniu CodersCrew do zarządzania organizacjami non-profit.",
 			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "MongoDB", "Express", "React + Redux", "NodeJS"],
+			descriptionTechs: ["TypeScript", "GraphQL", "Prisma", "React", "PostreSQL"],
 			codeLink: "https://github.com/jatanski/gift-from-dog",
 			demoLink: "https://github.com/jatanski/gift-from-dog",
 			images: [codersImg1, codersImg2, codersImg3],
@@ -194,14 +137,14 @@ export const projectsArraies = {
 
 export const startProject = {
 	title: "Family Album",
-	descriptionMain: "Bardzo fajny projekt, który zrobiłem z braciszkiem.",
+	descriptionMain: "Aplikacja wykonana jako prezent świąteczny dla rodziców razem z moim bratem. Jest to album",
 	descriptionFeatures: [
-		"Dodawanie foteczek piesków.",
-		"Przeglądanie foteczek piesków.",
-		"Tworzenie albumów na wyjątkowe okazje.",
+		"Tworzenie albumów ze zdjęciami wraz z opisami i datami wykonamia",
+		"Udostępnianie albumów innym członkom rodziny",
+		"Oglądanie zdjęć",
 	],
-	descriptionTechs: ["React", "Node", "TypeScript"],
-	codeLink: "https://github.com/jatanski/gift-from-dog",
-	demoLink: "https://github.com/jatanski/gift-from-dog",
+	descriptionTechs: ["React", "Node", "TypeScript", "Express", "MongoDB"],
+	codeLink: "https://github.com/jatanski/family-album",
+	demoLink: "https://github.com/jatanski/family-album",
 	images: [familyAlbum1, familyAlbum2, familyAlbum3],
 };

@@ -12,10 +12,54 @@ body {
 
 	h1 {
 		font-size: 6rem;
+
+		@media (max-width: 1600px) {
+			font-size: 5.6rem;
+		}
+
+		@media (max-width: 1400px) {
+			font-size: 5.3rem;
+		}
+
+		@media (max-width: 1200px) {
+			font-size: 5rem;
+		}
+
+		@media (max-width: 420px) {
+			font-size: 3.6rem;
+		}
 	}
 
 	h2 {
 		font-size: 3.2rem;
+
+		@media (max-width: 1600px) {
+			font-size: 3rem;
+		}
+
+		@media (max-width: 1400px) {
+			font-size: 2.7rem;
+		}
+
+		@media (max-width: 1200px) {
+			font-size: 2.5rem;
+		}
+
+		@media (max-width: 420px) {
+			font-size: 1.6rem;
+		}
+
+		@media (max-width: 380px) {
+			font-size: 1.4rem;
+		}
+
+		@media (max-width: 360px) {
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 320px) {
+			font-size: 1.1rem;
+		}
 	}
 
 	i,
@@ -25,18 +69,47 @@ body {
 }
 
 .scrollWrap {
+	display: flex;
+	justify-content: space-between;
 	position: absolute;
 	bottom: 2vh;
 	left: 50%;
 	transform: translateX(-50%);
-	display: flex;
-	width: 11.5vw;
-	justify-content: space-between;
+	width: 12vw;
 	font-size: 1.2rem;
+	animation: actionShow 1.2s 3s both;
 
 	&--icon {
-		color: #fff;
 		position: relative;
+		color: $first-text-color;
 		animation: animateArrow 3s infinite;
+	}
+
+	@media (max-width: 1700px) {
+		width: 14vw;
+	}
+
+	@media (max-width: 1500px) {
+		width: 16vw;
+	}
+
+	@media (max-width: 1300px) {
+		width: 18vw;
+	}
+
+	@media (max-width: 800px) {
+		width: 30vw;
+	}
+
+	@media (max-width: 420px) {
+		width: 55vw;
+	}
+
+	@media (max-width: 380px) {
+		width: 60vw;
+	}
+
+	@media (max-width: 320px) {
+		width: 66vw;
 	}
 }

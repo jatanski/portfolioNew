@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
 import React, { SFC } from "react";
 import ProjectPresentation from "./ProjectsComponents/Project.presentation";
 import { ProjectsViewInput } from "./ProjectsLogic/Projects.types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import ProjectsLeftSide from "./ProjectsComponents/Projects.leftSide";
+import "./projects-scss/projects-main.scss";
 
 const ProjectsView: SFC<ProjectsViewInput> = ({
 	setActualTitle,

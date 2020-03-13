@@ -8,8 +8,16 @@ const About = () => {
 	const [namePosition, setNamePosition] = useState("translateX(0px)");
 	const [admissionPosition, setAdmissionPosition] = useState("translateX(0px)");
 
+	function selectAndSetAboutClass(number1: number, number2: number) {
+		window.scrollY <= number1 || window.scrollY >= number2
+			? setAboutClass("about")
+			: setAboutClass("about showAbout");
+	}
+
 	function showAbout() {
-		window.scrollY <= 500 || window.scrollY >= 1800 ? setAboutClass("about") : setAboutClass("about showAbout");
+		if (window.outerHeight > 736) selectAndSetAboutClass(500, 1800);
+		else if (window.outerHeight <= 736 && window.outerHeight > 667) selectAndSetAboutClass(220, 1100);
+		else if (window.outerHeight <= 667) selectAndSetAboutClass(150, 1100);
 	}
 
 	function changeNamePosition() {

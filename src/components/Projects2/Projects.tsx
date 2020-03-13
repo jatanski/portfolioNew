@@ -3,9 +3,7 @@ import React, { useState, MouseEvent, useEffect } from "react";
 import { ActualProject } from "./ProjectsLogic/Projects.types";
 import { startProject } from "./ProjectsLogic/projectsInfo";
 import ProjectsView from "./Projects.view";
-import "./projects2.scss";
 import ProjectsHooks from "./ProjectsLogic/Project.hooks";
-import ProjectHooks from "./ProjectsLogic/Project.hooks";
 
 const Projects = () => {
 	const [title, setTitle] = useState("");
@@ -25,7 +23,7 @@ const Projects = () => {
 		images: actualProject?.images,
 	};
 
-	useEffect(() => ProjectHooks.useSetActualProjectToPresentation(title, setActualProject), [title]);
+	useEffect(() => ProjectsHooks.useSetActualProjectToPresentation(title, setActualProject), [title]);
 
 	const setActualTitle = (e: MouseEvent<HTMLLIElement>) => setTitle(e.currentTarget.id);
 

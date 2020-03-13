@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { SFC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeartBroken, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faHandPointLeft } from "@fortawesome/free-solid-svg-icons";
 import MeImage from "./MeImage";
 
 interface AboutViewInput {
@@ -18,7 +18,7 @@ const AboutView: SFC<AboutViewInput> = ({ aboutClassName, headerNameTransformSty
 					Hi, my name is
 				</p>
 				<p className="header-name" style={{ transform: headerNameTransformStyle }}>
-					Tanski. James Tanski <FontAwesomeIcon color="red" icon={faHeartBroken} />
+					Tanski. James Tanski <FontAwesomeIcon icon={faHandPointLeft} />
 				</p>
 				<p className="header-description">
 					&quot;Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten Bonapart figurka! Bez

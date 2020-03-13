@@ -1,0 +1,184 @@
+@import "../../../scss/abstracts/variables";
+@import "../../../scss/abstracts/mixins";
+
+.projects {
+	&__title {
+		position: relative;
+		top: 30vh;
+		transform: translateY(-50%);
+		margin-left: 15vw;
+
+		@media (max-width: 800px) {
+			top: 15vh;
+		}
+
+		@media (max-width: 420px) {
+			top: 10vh;
+		}
+
+		.title-admission {
+			font-size: 2rem;
+
+			@media (max-width: 1500px) {
+				font-size: 1.9rem;
+			}
+
+			@media (max-width: 1300px) {
+				font-size: 1.7rem;
+			}
+
+			@media (max-width: 420px) {
+				font-size: 1.6rem;
+			}
+		}
+
+		.title-name {
+			font-size: 4rem;
+			text-transform: uppercase;
+
+			@media (max-width: 1500px) {
+				font-size: 3.7rem;
+			}
+
+			@media (max-width: 1300px) {
+				font-size: 3.4rem;
+			}
+
+			@media (max-width: 420px) {
+				font-size: 3rem;
+			}
+		}
+
+		@media (max-width: 1500px) {
+			margin-left: 10vw;
+		}
+	}
+
+	&__main {
+		display: flex;
+		width: 60%;
+		position: relative;
+		top: 40vh;
+		margin-left: 15vw;
+		transform: translateY(-50%);
+
+		@media (max-width: 1500px) {
+			margin-left: 10vw;
+			width: 70%;
+		}
+
+		@media (max-width: 800px) {
+			top: 20vh;
+		}
+
+		@media (max-width: 420px) {
+			width: 90%;
+		}
+
+		.projects-main__myself,
+		.projects-main__heckathon {
+			position: relative;
+
+			&::before {
+				@include pseudoElementBase();
+				left: -8%;
+				top: 8%;
+				height: 90%;
+				width: 2px;
+				background-color: $fifth-bgc-color;
+			}
+		}
+
+		.element-title {
+			font-size: 2.2rem;
+			line-height: 160%;
+			text-transform: uppercase;
+
+			@media (max-width: 1500px) {
+				font-size: 2rem;
+			}
+
+			@media (max-width: 1300px) {
+				font-size: 1.8rem;
+			}
+
+			@media (max-width: 420px) {
+				font-size: 1.4rem;
+			}
+		}
+
+		.element-link {
+			font-size: 1.3em;
+			line-height: 170%;
+			margin-right: 5vw;
+			cursor: pointer;
+
+			&__text {
+				display: inline-block;
+				position: relative;
+
+				&::after,
+				&::before {
+					@include pseudoElementBase();
+					bottom: 0;
+					width: 0%;
+					height: 1px;
+					background-color: $fifth-bgc-color;
+
+					transition: 0.3s;
+				}
+
+				&::before {
+					height: 2px;
+					transition: 0.5s;
+				}
+
+				&:hover::after,
+				&:hover::before {
+					width: 100%;
+				}
+			}
+
+			@media (max-width: 1500px) {
+				font-size: 1.2rem;
+			}
+
+			@media (max-width: 1350px) {
+				font-size: 1.1rem;
+			}
+		}
+	}
+}
+
+.element-link.element-show {
+	&--0,
+	&--1,
+	&--2,
+	&--3 {
+		transform: translateY(15vh);
+		opacity: 0;
+		transition-duration: 0.8s;
+	}
+
+	&--1 {
+		transition-delay: 0.5s;
+	}
+
+	&--2 {
+		transition-delay: 1s;
+	}
+
+	&--3 {
+		transition-delay: 1.5s;
+	}
+}
+
+.show-projects-main .element-show {
+	&--0,
+	&--1,
+	&--2,
+	&--3 {
+		opacity: 1;
+		transform: translateY(0vh);
+	}
+}

@@ -12,9 +12,8 @@ const Menu: SFC = () => {
 	const menuInfo = [
 		{ id: "#home", name: "Home" },
 		{ id: "#about", name: "About" },
-		{ id: "#my-stack", name: "My stack" },
-		{ id: "projects", name: "Projects" },
-		{ id: "contact", name: "Contact" },
+		{ id: "#projects", name: "Projects" },
+		{ id: "#contact", name: "Contact" },
 	];
 
 	const openNav = () => {

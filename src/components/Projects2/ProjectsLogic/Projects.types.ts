@@ -40,3 +40,20 @@ export interface ProjectsListInput {
 	setActualTitle: (e: MouseEvent<HTMLLIElement>) => void;
 	mainClassName: string;
 }
+
+export interface ProjectPresentationInput {
+	title?: string;
+	descriptionMain?: string;
+	descriptionFeatures?: Array<string>;
+	descriptionTechs?: Array<string>;
+	codeLink?: string;
+	demoLink?: string;
+	images?: Array<any>;
+}
+
+export interface ProjectsPresentationDescriptionInput {
+	title?: string;
+	descriptionMain?: string;
+	descriptionTechs?: Array<string>;
+	descriptionFeatures?: Array<string>;
+}

@@ -1,0 +1,62 @@
+@import "../../../scss/abstracts/variables";
+@import "./projects-leftSide.scss";
+@import "./projects-rightSide.scss";
+
+.projects {
+	position: relative;
+	min-height: 100vh;
+	color: $first-text-color;
+	background: $fourth-bgc-color;
+	background: -moz-linear-gradient(100deg, $third-bgc-color 0%, $fourth-bgc-color 100%);
+	background: -webkit-linear-gradient(100deg, $third-bgc-color 0%, $fourth-bgc-color 100%);
+	background: linear-gradient(100deg, $third-bgc-color 0%, $fourth-bgc-color 100%);
+
+	&__opacity-wrap {
+		display: flex;
+		opacity: 0;
+		transition: 1.2s;
+
+		@media (max-width: 800px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__leftSideWrap,
+	&__rightSideWrap {
+		width: 50vw;
+
+		@media (max-width: 800px) {
+			width: 100vw;
+		}
+	}
+}
+
+.show-projects-wrap {
+	opacity: 1;
+	transition: 1.2s;
+}
+
+.projects__scrollWrap.scrollWrap {
+	width: 12vw;
+
+	@media (max-width: 1600px) {
+		width: 14vw;
+	}
+
+	@media (max-width: 1300px) {
+		width: 16vw;
+	}
+
+	@media (max-width: 800px) {
+		width: 26vw;
+	}
+
+	@media (max-width: 800px) {
+		width: 50vw;
+	}
+
+	@media (max-width: 360px) {
+		width: 55vw;
+	}
+}

@@ -26,7 +26,7 @@ const ContactView: SFC<ContactViewInput> = ({ contactClass, sendMessage }) => (
 		<div className="contact__info">
 			<span className="contact__info--email">
 				<a className="email-link" href="mailto:hello@jakubtanski.com" target="_blank">
-					hello@jakubtanski.com
+					<p className="email-link__text">hello@jakubtanski.com</p>
 				</a>
 				|
 			</span>

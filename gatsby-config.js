@@ -3,7 +3,7 @@ module.exports = {
 		title: "Jakub Tanski Development",
 		description: "Welcome to my web developer portfolio site.",
 		author: "Jakub Tański",
-		logo: "src/images/portfolio-icon.png",
+		logo: "./src/images/portfolio-icon.png",
 	},
 	plugins: [
 		{
@@ -74,13 +74,13 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
-				name: "Odzyskaj swoją prowizję",
-				short_name: "Odzyskaj prowizję",
+				name: "Jakub Tanski Development",
+				short_name: "Tanski Development",
 				start_url: "/",
-				background_color: "#663399",
-				theme_color: "#F7805C",
+				background_color: "#EEE",
+				theme_color: "#ff416a",
 				display: "minimal-ui",
-				icon: "src/images/gatsby-icon.png",
+				icon: "src/images/portfolio-icon.png",
 			},
 		},
 	],

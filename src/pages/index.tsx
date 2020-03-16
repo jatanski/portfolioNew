@@ -9,11 +9,10 @@ import "../scss/global.scss";
 
 const IndexPage = () => (
 	<>
-		<SEO title="Home" />
+		<SEO title="Jakub Tanski Development" />
 		<Menu />
 		<Header />
 		<About />
-		{/* <MyStack /> */}
 		<Projects />
 		<Contact />
 	</>

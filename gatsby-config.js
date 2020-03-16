@@ -1,10 +1,9 @@
 module.exports = {
 	siteMetadata: {
-		title: "Odzyskaj swoją prowizję",
-		description:
-			"Jeżeli spłaciłeś przed terminem, skonsolidowałeś lub przeniosłeś do innego banku swój kredyt to uzyskamy dla Ciebie gwarantowany zwrot prowizji!",
+		title: "Jakub Tanski Development",
+		description: "Welcome to my web developer portfolio site.",
 		author: "Jakub Tański",
-		logo: "src/images/gatsby-icon.png",
+		logo: "src/images/portfolio-icon.png",
 	},
 	plugins: [
 		{
@@ -81,11 +80,8 @@ module.exports = {
 				background_color: "#663399",
 				theme_color: "#F7805C",
 				display: "minimal-ui",
-				icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
+				icon: "src/images/gatsby-icon.png",
 			},
 		},
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// 'gatsby-plugin-offline',
 	],
 };

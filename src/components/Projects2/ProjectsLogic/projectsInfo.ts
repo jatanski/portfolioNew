@@ -1,34 +1,35 @@
-import businessCardImg1 from "../../../images/projects/businessCard/businness-card-1.jpg";
-import businessCardImg2 from "../../../images/projects/businessCard/businness-card-2.jpg";
-import businessCardImg3 from "../../../images/projects/businessCard/businness-card-3.jpg";
+/* eslint-disable no-undef */
+const businessCardImg1 = require("../../../images/projects/businessCard/businness-card-1.jpg");
+const businessCardImg2 = require("../../../images/projects/businessCard/businness-card-2.jpg");
+const businessCardImg3 = require("../../../images/projects/businessCard/businness-card-3.jpg");
 
-import commisionImage1 from "../../../images/projects/commisionRefundPage/commision-img1.jpg";
-import commisionImage2 from "../../../images/projects/commisionRefundPage/commision-img2.jpg";
-import commisionImage3 from "../../../images/projects/commisionRefundPage/commision-img3.jpg";
+const commisionImage1 = require("../../../images/projects/commisionRefundPage/commision-img1.jpg");
+const commisionImage2 = require("../../../images/projects/commisionRefundPage/commision-img2.jpg");
+const commisionImage3 = require("../../../images/projects/commisionRefundPage/commision-img3.jpg");
 
-import masterOfSport1 from "../../../images/projects/masterOfSport/master-img1.jpg";
-import masterOfSport2 from "../../../images/projects/masterOfSport/master-img2.jpg";
-import masterOfSport3 from "../../../images/projects/masterOfSport/master-img3.jpg";
+const masterOfSport1 = require("../../../images/projects/masterOfSport/master-img1.jpg");
+const masterOfSport2 = require("../../../images/projects/masterOfSport/master-img2.jpg");
+const masterOfSport3 = require("../../../images/projects/masterOfSport/master-img3.jpg");
 
-import englishImage1 from "../../../images/projects/englishApp/englishImage1.jpg";
-import englishImage2 from "../../../images/projects/englishApp/englishImage2.jpg";
-import englishImage3 from "../../../images/projects/englishApp/englishImage3.jpg";
+const englishImage1 = require("../../../images/projects/englishApp/englishImage1.jpg");
+const englishImage2 = require("../../../images/projects/englishApp/englishImage2.jpg");
+const englishImage3 = require("../../../images/projects/englishApp/englishImage3.jpg");
 
-import familyAlbum1 from "../../../images/projects/familyAlbum/photo-0.jpg";
-import familyAlbum2 from "../../../images/projects/familyAlbum/photo-1.jpg";
-import familyAlbum3 from "../../../images/projects/familyAlbum/photo-2.jpg";
+const familyAlbum1 = require("../../../images/projects/familyAlbum/photo-0.jpg");
+const familyAlbum2 = require("../../../images/projects/familyAlbum/photo-1.jpg");
+const familyAlbum3 = require("../../../images/projects/familyAlbum/photo-2.jpg");
 
-import optimizeImage1 from "../../../images/projects/optimizeApp/optimizeImg1.jpg";
-import optimizeImage2 from "../../../images/projects/optimizeApp/optimizeImg2.jpg";
-import optimizeImage3 from "../../../images/projects/optimizeApp/optimizeImg3.jpg";
+const optimizeImage1 = require("../../../images/projects/optimizeApp/optimizeImg1.jpg");
+const optimizeImage2 = require("../../../images/projects/optimizeApp/optimizeImg2.jpg");
+const optimizeImage3 = require("../../../images/projects/optimizeApp/optimizeImg3.jpg");
 
-import chatImg1 from "../../../images/projects/lifeChat/lifeChat1.jpg";
-import chatImg2 from "../../../images/projects/lifeChat/lifeChat2.jpg";
-import chatImg3 from "../../../images/projects/lifeChat/lifeChat3.jpg";
+const chatImg1 = require("../../../images/projects/lifeChat/lifeChat1.jpg");
+const chatImg2 = require("../../../images/projects/lifeChat/lifeChat2.jpg");
+const chatImg3 = require("../../../images/projects/lifeChat/lifeChat3.jpg");
 
-import codersImg1 from "../../../images/projects/codersBoard/codersImg1.jpg";
-import codersImg2 from "../../../images/projects/codersBoard/codersImg2.jpg";
-import codersImg3 from "../../../images/projects/codersBoard/codersImg3.jpg";
+const codersImg1 = require("../../../images/projects/codersBoard/codersImg1.jpg");
+const codersImg2 = require("../../../images/projects/codersBoard/codersImg2.jpg");
+const codersImg3 = require("../../../images/projects/codersBoard/codersImg3.jpg");
 
 export const projectsArraies = {
 	myself: [

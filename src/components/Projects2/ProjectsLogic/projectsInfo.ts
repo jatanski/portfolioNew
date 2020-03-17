@@ -11,25 +11,25 @@ const masterOfSport1 = require("../../../images/projects/masterOfSport/master-im
 const masterOfSport2 = require("../../../images/projects/masterOfSport/master-img2.jpg");
 const masterOfSport3 = require("../../../images/projects/masterOfSport/master-img3.jpg");
 
-const englishImage1 = require("../../../images/projects/englishApp/englishImage1.jpg");
-const englishImage2 = require("../../../images/projects/englishApp/englishImage2.jpg");
-const englishImage3 = require("../../../images/projects/englishApp/englishImage3.jpg");
+const englishImage1 = require("../../../images/projects/englishApp/english-img1.jpg");
+const englishImage2 = require("../../../images/projects/englishApp/english-img2.jpg");
+const englishImage3 = require("../../../images/projects/englishApp/english-img3.jpg");
 
-const familyAlbum1 = require("../../../images/projects/familyAlbum/photo-0.jpg");
-const familyAlbum2 = require("../../../images/projects/familyAlbum/photo-1.jpg");
-const familyAlbum3 = require("../../../images/projects/familyAlbum/photo-2.jpg");
+const familyAlbum1 = require("../../../images/projects/familyAlbum/album-img3.jpg");
+const familyAlbum2 = require("../../../images/projects/familyAlbum/album-img1.jpg");
+const familyAlbum3 = require("../../../images/projects/familyAlbum/album-img2.jpg");
 
-const optimizeImage1 = require("../../../images/projects/optimizeApp/optimizeImg1.jpg");
-const optimizeImage2 = require("../../../images/projects/optimizeApp/optimizeImg2.jpg");
-const optimizeImage3 = require("../../../images/projects/optimizeApp/optimizeImg3.jpg");
+const optimizeImage1 = require("../../../images/projects/optimizeApp/optimize-img-1.jpg");
+const optimizeImage2 = require("../../../images/projects/optimizeApp/optimize-img-2.jpg");
+const optimizeImage3 = require("../../../images/projects/optimizeApp/optimize-img-3.jpg");
 
-const chatImg1 = require("../../../images/projects/lifeChat/lifeChat1.jpg");
-const chatImg2 = require("../../../images/projects/lifeChat/lifeChat2.jpg");
-const chatImg3 = require("../../../images/projects/lifeChat/lifeChat3.jpg");
+const chatImg1 = require("../../../images/projects/lifeChat/lifeChat-img1.jpg");
+const chatImg2 = require("../../../images/projects/lifeChat/lifeChat-img2.jpg");
+const chatImg3 = require("../../../images/projects/lifeChat/lifeChat-img3.jpg");
 
-const codersImg1 = require("../../../images/projects/codersBoard/codersImg1.jpg");
-const codersImg2 = require("../../../images/projects/codersBoard/codersImg2.jpg");
-const codersImg3 = require("../../../images/projects/codersBoard/codersImg3.jpg");
+// const codersImg1 = require("../../../images/projects/codersBoard/codersImg1.jpg");
+// const codersImg2 = require("../../../images/projects/codersBoard/codersImg2.jpg");
+// const codersImg3 = require("../../../images/projects/codersBoard/codersImg3.jpg");
 
 export const projectsArraies = {
 	myself: [
@@ -94,7 +94,7 @@ export const projectsArraies = {
 			],
 			descriptionTechs: ["React", "Node", "TypeScript", "Express", "MongoDB"],
 			codeLink: "https://github.com/jatanski/family-album",
-			demoLink: "https://github.com/jatanski/family-album",
+			demoLink: "http://family-album.surge.sh/#/",
 			images: [familyAlbum1, familyAlbum2, familyAlbum3],
 		},
 		{
@@ -123,16 +123,15 @@ export const projectsArraies = {
 			demoLink: "https://github.com/jatanski/LifeChat",
 			images: [chatImg1, chatImg2, chatImg3],
 		},
-
-		{
-			title: "Coders Board",
-			descriptionMain: "Aplikacja tworzona w stowarzyszeniu CodersCrew do zarządzania organizacjami non-profit.",
-			descriptionFeatures: ["Dodawanie zdjęć"],
-			descriptionTechs: ["TypeScript", "GraphQL", "Prisma", "React", "PostreSQL"],
-			codeLink: "https://github.com/jatanski/gift-from-dog",
-			demoLink: "https://github.com/jatanski/gift-from-dog",
-			images: [codersImg1, codersImg2, codersImg3],
-		},
+		// {
+		// 	title: "Coders Board",
+		// 	descriptionMain: "Aplikacja tworzona w stowarzyszeniu CodersCrew do zarządzania organizacjami non-profit.",
+		// 	descriptionFeatures: ["Dodawanie zdjęć"],
+		// 	descriptionTechs: ["TypeScript", "GraphQL", "Prisma", "React", "PostreSQL"],
+		// 	codeLink: "https://github.com/jatanski/gift-from-dog",
+		// 	demoLink: "https://github.com/jatanski/gift-from-dog",
+		// 	images: [codersImg1, codersImg2, codersImg3],
+		// },
 	],
 };
 
@@ -146,6 +145,6 @@ export const startProject = {
 	],
 	descriptionTechs: ["React", "Node", "TypeScript", "Express", "MongoDB"],
 	codeLink: "https://github.com/jatanski/family-album",
-	demoLink: "https://github.com/jatanski/family-album",
+	demoLink: "http://family-album.surge.sh/#/",
 	images: [familyAlbum1, familyAlbum2, familyAlbum3],
 };

@@ -1,8 +1,10 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React, { SFC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faHandPointLeft } from "@fortawesome/free-solid-svg-icons";
-import MeImage from "./MeImage";
+// import MeImage from "./MeImage";
+const MeImage2 = require("../../images/jakub_tanski.jpg");
 
 interface AboutViewInput {
 	aboutClassName: string;
@@ -29,7 +31,8 @@ const AboutView: SFC<AboutViewInput> = ({ aboutClassName, headerNameTransformSty
 			</div>
 		</div>
 		<div className="about__image">
-			<MeImage />
+			{/* <MeImage /> */}
+			<img src={MeImage2} alt="Jakub Tanski" />
 		</div>
 		<div className="about__scrollWrap scrollWrap">
 			<a href="#projects" className="about__scrollWrap--icon scrollWrap--icon">

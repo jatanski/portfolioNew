@@ -5,6 +5,7 @@ module.exports = {
 		author: "Jakub Tański",
 		logo: "./src/images/portfolio-icon.png",
 	},
+	pathPrefix: "/portfolioNew",
 	plugins: [
 		{
 			resolve: "gatsby-plugin-web-font-loader",

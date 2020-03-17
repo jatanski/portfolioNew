@@ -136,6 +136,10 @@
 		border-radius: 50%;
 		overflow: hidden;
 
+		& img {
+			width: 100%;
+		}
+
 		@media (max-width: 1400px) {
 			transform: translate(80%, -50%);
 		}

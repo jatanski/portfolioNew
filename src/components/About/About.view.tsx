@@ -23,10 +23,11 @@ const AboutView: SFC<AboutViewInput> = ({ aboutClassName, headerNameTransformSty
 					Tanski. James Tanski <FontAwesomeIcon icon={faHandPointLeft} />
 				</p>
 				<p className="header-description">
-					&quot;Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten Bonapart figurka! Bez
-					Suworowa to mówiąc, że odgłos trąbki i Bernatowicze, Kupść, Gedymin i ziemię kochaną i palestra, i
-					opisuję, bo tak Suwarów w tym kończy się, że w Ulm, w pół kroku Tak każe przyzwoitość. nikt
-					mężczyzn.&quot;
+					&quot;I sold financial products over the internet for 3 years. After changing the market situation,
+					I decided to change the industry to IT and started learning web programming. I currently have over a
+					year of non-commercial experience and belong to the CodersCrew association, where I am a web
+					developer and also a mentor during CodersCamp courses. My main professional goal is to develop my
+					skills in the field of web programming and become a frontend programmer.&quot;
 				</p>
 			</div>
 		</div>

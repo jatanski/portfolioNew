@@ -201,3 +201,39 @@
 	opacity: 1;
 	transition: 1.2s;
 }
+
+.react-toast-notifications__toast__content {
+	font-size: 22px !important;
+}
+
+// loader
+
+.contact-loader__spin {
+	display: inline-block;
+	position: relative;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.contact-loader__spin div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 10px solid #555;
+	margin-left: 10px;
+	border-radius: 50%;
+	animation: contact-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #555 transparent transparent transparent;
+}
+
+.contact-loader__spin div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+.contact-loader__spin div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+.contact-loader__spin div:nth-child(3) {
+	animation-delay: -0.15s;
+}

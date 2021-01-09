@@ -6,15 +6,18 @@ import About from "../components/About/About";
 import ProjectsLogic from "../components/Projects2/Projects.logic";
 import Contact from "../components/Contact/Contact";
 import "../scss/global.scss";
+import { ToastProvider } from "react-toast-notifications";
 
 const IndexPage = () => (
 	<main>
-		<SEO title="Jakub Tanski Development" />
-		<Menu />
-		<Header />
-		<About />
-		<ProjectsLogic />
-		<Contact />
+		<ToastProvider>
+			<SEO title="Jakub Tanski Development" />
+			<Menu />
+			<Header />
+			<About />
+			<ProjectsLogic />
+			<Contact />
+		</ToastProvider>
 	</main>
 );
 

@@ -1,13 +1,12 @@
-/* eslint-disable react/prop-types */
-import React, { SFC } from "react";
-import ProjectPresentation from "./ProjectsComponents/Project.presentation";
-import { ProjectsViewInput } from "./ProjectsLogic/Projects.types";
+import React, { FC } from "react";
+import ProjectsPresentation from "./ProjectsComponents/Projects.presentation";
+import { ProjectsViewProps } from "./ProjectsLogic/Projects.types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import ProjectsLeftSide from "./ProjectsComponents/Projects.leftSide";
 import "./projects-scss/projects-main.scss";
 
-const ProjectsView: SFC<ProjectsViewInput> = ({
+const ProjectsView: FC<ProjectsViewProps> = ({
 	setActualTitle,
 	presentationInfo,
 	projectsClassName,
@@ -24,10 +23,10 @@ const ProjectsView: SFC<ProjectsViewInput> = ({
 				titlePosition={titlePosition}
 			/>
 			<div className="projects__rightSideWrap">
-				<ProjectPresentation {...presentationInfo} />
+				<ProjectsPresentation {...presentationInfo} />
 			</div>
 			<div className="projects__scrollWrap scrollWrap">
-				<a href="#contact" className="projects__scrollWrap--icon scrollWrap--icon">
+				<a href="#contact" className="projects__scrollWrap__link scrollWrap__link">
 					<FontAwesomeIcon icon={faChevronDown} />
 				</a>
 				<p>Come on. There&apos;s more.</p>

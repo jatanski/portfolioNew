@@ -1,45 +1,47 @@
-/* eslint-disable no-undef */
-import React, { useState, useEffect } from "react";
-import "./about.scss";
+import React, { useState, useEffect, FC } from "react";
+import ShowSection from "../../utils/ShowSections";
 import AboutView from "./About.view";
+import { getShowSectionCheckpointsInput } from "./about.types";
+import "./about.scss";
 
-const About = () => {
-	const [aboutClass, setAboutClass] = useState("about");
-	const [namePosition, setNamePosition] = useState("translateX(0px)");
+const About: FC = () => {
+	const showSection = new ShowSection();
+	const [aboutClassName, setAboutClassName] = useState("about");
+	const [headerNameTransform, setHeaderNameTransformPosition] = useState("translateX(0px)");
 	const [admissionPosition, setAdmissionPosition] = useState("translateX(0px)");
 
-	function selectAndSetAboutClass(number1: number, number2: number) {
-		window.scrollY <= number1 || window.scrollY >= number2
-			? setAboutClass("about")
-			: setAboutClass("about showAbout");
+	useEffect(() => addScrollEvents());
+
+	function addScrollEvents() {
+		window.addEventListener("scroll", showAboutSection);
+		window.addEventListener("scroll", showSection.changeTextPosition.bind("", 8, setHeaderNameTransformPosition));
+		window.addEventListener("scroll", showSection.changeAdmissionPosition.bind("", 8, setAdmissionPosition));
 	}
 
-	function showAbout() {
-		if (window.outerHeight > 736) selectAndSetAboutClass(500, 1800);
-		else if (window.outerHeight <= 736 && window.outerHeight > 667) selectAndSetAboutClass(220, 1100);
-		else if (window.outerHeight <= 667) selectAndSetAboutClass(150, 1100);
-	}
+	function showAboutSection() {
+		const getShowSectionCheckpointsData: getShowSectionCheckpointsInput = {
+			moreThenFirstCheckpoint: {
+				start: 500,
+				end: 1800,
+			},
+			belowFirstAndSecondChecpoint: {
+				start: 220,
+				end: 1100,
+			},
+			lessThenSecondCheckpoint: {
+				start: 150,
+				end: 1100,
+			},
+		};
 
-	function changeNamePosition() {
-		const actualNamePosition = `translateX(${window.pageYOffset / 8 - 100}px)`;
-		setNamePosition(actualNamePosition);
+		const { start, end } = showSection.getShowSectionCheckpoints(getShowSectionCheckpointsData);
+		showSection.setSectionClassName(start, end, "about", "about showAbout", setAboutClassName);
 	}
-
-	function changeAdmissionPosition() {
-		const actualAdmissionPosition = `translateX(${100 - window.pageYOffset / 8}px)`;
-		setAdmissionPosition(actualAdmissionPosition);
-	}
-
-	useEffect(() => {
-		window.addEventListener("scroll", showAbout);
-		window.addEventListener("scroll", changeNamePosition);
-		window.addEventListener("scroll", changeAdmissionPosition);
-	});
 
 	return (
 		<AboutView
-			aboutClassName={aboutClass}
-			headerNameTransformStyle={namePosition}
+			aboutClassName={aboutClassName}
+			headerNameTransformStyle={headerNameTransform}
 			admissionPosition={admissionPosition}
 		/>
 	);

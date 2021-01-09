@@ -1,13 +1,11 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable react/prop-types */
-import React, { SFC } from "react";
+import React, { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faDesktop } from "@fortawesome/free-solid-svg-icons";
 
-import { ProjectPresentationInput } from "../ProjectsLogic/Projects.types";
+import { ProjectPresentationProps } from "../ProjectsLogic/Projects.types";
 import ProjectPresentationDescription from "./Projects.presentation.description";
 
-const ProjectPresentation: SFC<ProjectPresentationInput> = ({
+const ProjectsPresentation: FC<ProjectPresentationProps> = ({
 	title,
 	descriptionFeatures,
 	descriptionMain,
@@ -19,7 +17,7 @@ const ProjectPresentation: SFC<ProjectPresentationInput> = ({
 	return (
 		<div className="projects__presentation">
 			<div className="projects__presentation__imageWrap">
-				{images?.map((image, i) => {
+				{images.map((image, i) => {
 					const className = `image-project img-proj-${i}`;
 					const bgImg = `url(${image})`;
 
@@ -67,4 +65,4 @@ const ProjectPresentation: SFC<ProjectPresentationInput> = ({
 	);
 };
 
-export default ProjectPresentation;
+export default ProjectsPresentation;

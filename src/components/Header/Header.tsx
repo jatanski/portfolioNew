@@ -1,48 +1,46 @@
-/* eslint-disable no-undef */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 import "./header.scss";
 import HeaderView from "./Header.view";
 
-const Header = () => {
+const Header: FC = () => {
 	const [actualHelloText, setActualHelloText] = useState("");
-	const [numberLettersInHelloText, setNumberLettersInHelloText] = useState(0);
+	const [lettersInHelloText, setlettersInHelloText] = useState(0);
+	const helloText = `Hello there! 👋`;
 
 	const [actualNameText, setActualNameText] = useState("");
-	const [numberLettersInNameText, setNumberLettersInNameText] = useState(0);
-
-	const helloText = `Hello there! 👋`;
+	const [lettersInNameText, setLettersInNameText] = useState(0);
 	const nameText = `Welcome on my portfolio web-developer website.`;
 
+	useEffect(() => {
+		setTimeout(initShowTextes, 40);
+	});
+
+	function initShowTextes() {
+		addLettersToHelloText();
+
+		if (lettersInHelloText >= 16) addLettersToNameText();
+	}
+
+	function addLettersToHelloText() {
+		if (lettersInHelloText <= 16)
+			setActualState(setlettersInHelloText, lettersInHelloText, helloText, setActualHelloText);
+	}
+
+	function addLettersToNameText() {
+		if (lettersInNameText < 47)
+			setActualState(setLettersInNameText, lettersInNameText, nameText, setActualNameText);
+	}
+
 	function setActualState(
-		setNumberLetterFunc: (arg0: number) => void,
+		setLettersFunc: (arg0: number) => void,
 		numberLetters: number,
 		textToShow: string,
 		setActualText: (arg0: string) => void
 	) {
-		setNumberLetterFunc(numberLetters + 1);
+		setLettersFunc(numberLetters + 1);
 		const textToSet = textToShow.slice(0, numberLetters);
 		setActualText(textToSet);
 	}
-
-	function addLettersToHelloText() {
-		if (numberLettersInHelloText <= 16)
-			setActualState(setNumberLettersInHelloText, numberLettersInHelloText, helloText, setActualHelloText);
-	}
-
-	function addLettersToNameText() {
-		if (numberLettersInNameText < 47)
-			setActualState(setNumberLettersInNameText, numberLettersInNameText, nameText, setActualNameText);
-	}
-
-	function init() {
-		addLettersToHelloText();
-
-		if (numberLettersInHelloText >= 16) addLettersToNameText();
-	}
-
-	useEffect(() => {
-		setTimeout(init, 40);
-	});
 
 	return <HeaderView actualHelloText={actualHelloText} actualNameText={actualNameText} />;
 };

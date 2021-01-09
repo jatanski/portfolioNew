@@ -1,49 +1,53 @@
-/* eslint-disable no-undef */
-import { projectsArraies } from "./projectsInfo";
+import { getShowSectionCheckpointsInput } from "../../../components/About/about.types";
+import ShowSection from "../../../utils/ShowSections";
+import { projectsInformations } from "./projects.info";
+import { MyProject } from "./Projects.types";
 
 export default class ProjectHooks {
-	static useSetActualProjectToPresentation(title: string, setActualProject: (value: any) => void) {
-		const actualProjectMySelf = projectsArraies.myself.find(({ title: titleProject }) => titleProject === title);
+	showSection: ShowSection;
+	constructor() {
+		this.showSection = new ShowSection();
+	}
+	useSetActualProjectToPresentation(title: string, setActualProject: (value: MyProject) => void) {
+		const { myself, withFriends } = projectsInformations;
+		const allProjects = [...myself, ...withFriends];
 
-		const actualProjectWithFriends = projectsArraies.withFriends.find(
-			({ title: titleProject }) => titleProject === title
-		);
-
-		const actualProject = actualProjectMySelf || actualProjectWithFriends;
+		const actualProject = allProjects.find(({ title: titleProject }) => titleProject === title);
 		if (actualProject) setActualProject(actualProject);
 	}
 
-	static selectAndSetProjectsClass(
-		number1: number,
-		number2: number,
-		setProjectsClassName: (value: string) => void,
-		setMainClassName: (value: string) => void
-	) {
-		window.scrollY <= number1 || window.scrollY >= number2
-			? setProjectsClassName("projects__opacity-wrap")
-			: setProjectsClassName("projects__opacity-wrap show-projects-wrap");
+	useShowProjects(setProjectsClassName: (value: string) => void, setMainClassName: (value: string) => void) {
+		const getShowSectionCheckpointsData: getShowSectionCheckpointsInput = {
+			moreThenFirstCheckpoint: {
+				start: 1300,
+				end: 2600,
+			},
+			belowFirstAndSecondChecpoint: {
+				start: 900,
+				end: 2000,
+			},
+			lessThenSecondCheckpoint: {
+				start: 800,
+				end: 1900,
+			},
+		};
 
-		window.scrollY <= number1 || window.scrollY >= number2
-			? setMainClassName("projects__main")
-			: setMainClassName("projects__main show-projects-main");
-	}
+		const { start, end } = this.showSection.getShowSectionCheckpoints(getShowSectionCheckpointsData);
 
-	static useShowProjects(setProjectsClassName: (value: string) => void, setMainClassName: (value: string) => void) {
-		if (window.outerHeight > 736)
-			ProjectHooks.selectAndSetProjectsClass(1300, 2600, setProjectsClassName, setMainClassName);
-		else if (window.outerHeight <= 736 && window.outerHeight > 667)
-			ProjectHooks.selectAndSetProjectsClass(900, 2000, setProjectsClassName, setMainClassName);
-		else if (window.outerHeight <= 667)
-			ProjectHooks.selectAndSetProjectsClass(800, 1900, setProjectsClassName, setMainClassName);
-	}
+		this.showSection.setSectionClassName(
+			start,
+			end,
+			"projects__opacity-wrap",
+			"projects__opacity-wrap show-projects-wrap",
+			setProjectsClassName
+		);
 
-	static useChangeTitlePosition(setTitlePosition: (value: string) => void) {
-		const actualNamePosition = `translateX(${window.pageYOffset / 16 - 100}px)`;
-		setTitlePosition(actualNamePosition);
-	}
-
-	static useChangeAdmissionPosition(setAdmissionPosition: (value: string) => void) {
-		const actualAdmissionPosition = `translateX(${100 - window.pageYOffset / 16}px)`;
-		setAdmissionPosition(actualAdmissionPosition);
+		this.showSection.setSectionClassName(
+			start,
+			end,
+			"projects__main",
+			"projects__main show-projects-main",
+			setMainClassName
+		);
 	}
 }

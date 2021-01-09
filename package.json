@@ -2,7 +2,7 @@
   "name": "tanski-web-portfolio",
   "private": true,
   "description": "My web-development portfolio site.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jakub Tanski",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -10,7 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "gatsby": "^2.19.7",
-    "gatsby-cli": "^2.10.11",
+    "gatsby-cli": "^2.17.0",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
@@ -20,26 +20,29 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "typescript": "^3.8.2"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "typescript": "^4.1.3"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "@types/node": "^14.14.20",
+    "@types/react-helmet": "^6.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.17.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-react-app": "^5.2.0",
-    "eslint-loader": "^3.0.3",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
-    "gatsby-image-background-slider": "^0.0.1",
+    "gatsby-image-background-slider": "^0.0.4",
     "gatsby-plugin-eslint": "^2.0.8",
-    "gatsby-plugin-sass": "^2.1.29",
+    "gatsby-plugin-sass": "^3.0.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gh-pages": "^2.2.0",
-    "node-sass": "^4.13.1",
-    "prettier": "^1.19.1"
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1"
   },
   "keywords": [
     "gatsby"

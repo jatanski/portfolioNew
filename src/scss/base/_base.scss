@@ -79,7 +79,7 @@ body {
 	font-size: 1.2rem;
 	animation: actionShow 1.2s 3s both;
 
-	&--icon {
+	&__link {
 		position: relative;
 		color: $first-text-color;
 		animation: animateArrow 3s infinite;

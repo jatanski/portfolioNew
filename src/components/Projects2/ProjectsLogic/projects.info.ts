@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+import { IProjectsInformations, MyProject } from "./Projects.types";
+
 const businessCardImg1 = require("../../../images/projects/businessCard/businness-card-1.jpg");
 const businessCardImg2 = require("../../../images/projects/businessCard/businness-card-2.jpg");
 const businessCardImg3 = require("../../../images/projects/businessCard/businness-card-3.jpg");
@@ -27,11 +28,7 @@ const chatImg1 = require("../../../images/projects/lifeChat/lifeChat-img1.jpg");
 const chatImg2 = require("../../../images/projects/lifeChat/lifeChat-img2.jpg");
 const chatImg3 = require("../../../images/projects/lifeChat/lifeChat-img3.jpg");
 
-// const codersImg1 = require("../../../images/projects/codersBoard/codersImg1.jpg");
-// const codersImg2 = require("../../../images/projects/codersBoard/codersImg2.jpg");
-// const codersImg3 = require("../../../images/projects/codersBoard/codersImg3.jpg");
-
-export const projectsArraies = {
+export const projectsInformations: IProjectsInformations = {
 	myself: [
 		{
 			title: "Businness Card",
@@ -123,19 +120,10 @@ export const projectsArraies = {
 			demoLink: "https://github.com/jatanski/LifeChat",
 			images: [chatImg1, chatImg2, chatImg3],
 		},
-		// {
-		// 	title: "Coders Board",
-		// 	descriptionMain: "Aplikacja tworzona w stowarzyszeniu CodersCrew do zarządzania organizacjami non-profit.",
-		// 	descriptionFeatures: ["Dodawanie zdjęć"],
-		// 	descriptionTechs: ["TypeScript", "GraphQL", "Prisma", "React", "PostreSQL"],
-		// 	codeLink: "https://github.com/jatanski/gift-from-dog",
-		// 	demoLink: "https://github.com/jatanski/gift-from-dog",
-		// 	images: [codersImg1, codersImg2, codersImg3],
-		// },
 	],
 };
 
-export const startProject = {
+export const startProject: MyProject = {
 	title: "Family Album",
 	descriptionMain: "Aplikacja wykonana jako prezent świąteczny dla rodziców razem z moim bratem. Jest to album",
 	descriptionFeatures: [

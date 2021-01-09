@@ -1,11 +1,10 @@
-/* eslint-disable react/prop-types */
-import React, { SFC } from "react";
+import React, { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAndroid } from "@fortawesome/free-brands-svg-icons";
 import { faChevronCircleRight, faCommentAlt, faToolbox, faInfo } from "@fortawesome/free-solid-svg-icons";
-import { ProjectsPresentationDescriptionInput } from "../ProjectsLogic/Projects.types";
+import { ProjectsPresentationDescriptionProps } from "../ProjectsLogic/Projects.types";
 
-const ProjectsPresentationDescription: SFC<ProjectsPresentationDescriptionInput> = ({
+const ProjectsPresentationDescription: FC<ProjectsPresentationDescriptionProps> = ({
 	descriptionMain,
 	title,
 	descriptionTechs,
@@ -30,7 +29,7 @@ const ProjectsPresentationDescription: SFC<ProjectsPresentationDescriptionInput>
 					Funkcjonalności:
 				</h4>
 				<ul className="text-features__list">
-					{descriptionFeatures?.map(feature => (
+					{descriptionFeatures.map(feature => (
 						<li className="text-features__list-element element-text-listElement" key={feature}>
 							<FontAwesomeIcon icon={faChevronCircleRight} />
 							{feature}
@@ -44,7 +43,7 @@ const ProjectsPresentationDescription: SFC<ProjectsPresentationDescriptionInput>
 					Użyte technologie:
 				</h4>
 				<ul className="text-techs__list">
-					{descriptionTechs?.map(tech => (
+					{descriptionTechs.map(tech => (
 						<li className="text-techs__list--element element-text-listElement" key={tech}>
 							<FontAwesomeIcon icon={faChevronCircleRight} />
 							{tech}

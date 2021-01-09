@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-import React, { SFC } from "react";
+import React, { FC } from "react";
 import ProjectsList from "./Projects.list";
-import { ProjectsLeftSideInput } from "../ProjectsLogic/Projects.types";
+import { ProjectsLeftSideProps } from "../ProjectsLogic/Projects.types";
 
-const ProjectsLeftSide: SFC<ProjectsLeftSideInput> = ({
+const ProjectsLeftSide: FC<ProjectsLeftSideProps> = ({
 	admissionPosition,
 	titlePosition,
 	mainClassName,

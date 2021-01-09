@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-no-target-blank */
-import React, { useState, SFC } from "react";
+import React, { useState, FC } from "react";
 import MenuView from "./Menu.view";
 import "./menu.scss";
 
-const Menu: SFC = () => {
+const Menu: FC = () => {
 	const [openButtonClassName, setOpenButtonClassName] = useState("menu__open nav-icon");
 	const [navClassName, setNavClassName] = useState("menu__nav");
 	const [navWrapClassName, setNavWrapClassName] = useState("menu__nav-wrap");

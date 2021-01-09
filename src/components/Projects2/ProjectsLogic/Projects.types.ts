@@ -1,7 +1,11 @@
-/* eslint-disable no-undef */
 import { MouseEvent } from "react";
 
-export interface ActualProject {
+export interface IProjectsInformations {
+	myself: Array<MyProject>;
+	withFriends: Array<MyProject>;
+}
+
+export interface MyProject {
 	title: string;
 	descriptionMain: string;
 	descriptionFeatures: Array<string>;
@@ -11,49 +15,40 @@ export interface ActualProject {
 	images: Array<any>;
 }
 
-export interface ProjectsViewInput {
+export interface ProjectsViewProps {
 	setActualTitle: (e: MouseEvent<HTMLLIElement>) => void;
-	presentationInfo: PresentationInfo;
+	presentationInfo: MyProject;
 	projectsClassName: string;
 	mainClassName: string;
 	titlePosition: string;
 	admissionPosition: string;
 }
 
-export interface ProjectsLeftSideInput {
+export interface ProjectsLeftSideProps {
 	admissionPosition: string;
 	titlePosition: string;
 	mainClassName: string;
 	setActualTitle: (e: MouseEvent<HTMLLIElement>) => void;
 }
 
-interface PresentationInfo {
-	title?: string;
-	descriptionMain?: string;
-	descriptionFeatures?: Array<string>;
-	descriptionTechs?: Array<string>;
-	codeLink?: string;
-	demoLink?: string;
-}
-
-export interface ProjectsListInput {
+export interface ProjectsListProps {
 	setActualTitle: (e: MouseEvent<HTMLLIElement>) => void;
 	mainClassName: string;
 }
 
-export interface ProjectPresentationInput {
-	title?: string;
-	descriptionMain?: string;
-	descriptionFeatures?: Array<string>;
-	descriptionTechs?: Array<string>;
-	codeLink?: string;
-	demoLink?: string;
-	images?: Array<any>;
+export interface ProjectPresentationProps {
+	title: string;
+	descriptionMain: string;
+	descriptionFeatures: Array<string>;
+	descriptionTechs: Array<string>;
+	codeLink: string;
+	demoLink: string;
+	images: Array<any>;
 }
 
-export interface ProjectsPresentationDescriptionInput {
-	title?: string;
-	descriptionMain?: string;
-	descriptionTechs?: Array<string>;
-	descriptionFeatures?: Array<string>;
+export interface ProjectsPresentationDescriptionProps {
+	title: string;
+	descriptionMain: string;
+	descriptionTechs: Array<string>;
+	descriptionFeatures: Array<string>;
 }

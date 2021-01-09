@@ -1,12 +1,10 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-no-target-blank */
-import React, { SFC } from "react";
+import React, { FC } from "react";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "gatsby";
 
-interface MenuViewInput {
+interface MenuViewProps {
 	openButtonClassName: string;
 	navWrapClassName: string;
 	navClassName: string;
@@ -18,7 +16,7 @@ interface MenuViewInput {
 	}>;
 }
 
-const MenuView: SFC<MenuViewInput> = ({
+const MenuView: FC<MenuViewProps> = ({
 	openButtonClassName,
 	navClassName,
 	navWrapClassName,

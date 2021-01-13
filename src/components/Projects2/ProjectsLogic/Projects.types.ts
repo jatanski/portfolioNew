@@ -12,7 +12,7 @@ export interface MyProject {
 	descriptionTechs: Array<string>;
 	codeLink: string;
 	demoLink: string;
-	images: Array<any>;
+	images: Array<string>;
 }
 
 export interface ProjectsViewProps {
@@ -43,7 +43,7 @@ export interface ProjectPresentationProps {
 	descriptionTechs: Array<string>;
 	codeLink: string;
 	demoLink: string;
-	images: Array<any>;
+	images: Array<string>;
 }
 
 export interface ProjectsPresentationDescriptionProps {
@@ -51,4 +51,9 @@ export interface ProjectsPresentationDescriptionProps {
 	descriptionMain: string;
 	descriptionTechs: Array<string>;
 	descriptionFeatures: Array<string>;
+}
+
+export interface ProjectsPresentationImage {
+	index: number;
+	image: string;
 }

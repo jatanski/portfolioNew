@@ -12,9 +12,13 @@ const masterOfSport1 = require("../../../images/projects/masterOfSport/master-im
 const masterOfSport2 = require("../../../images/projects/masterOfSport/master-img2.jpg");
 const masterOfSport3 = require("../../../images/projects/masterOfSport/master-img3.jpg");
 
-const englishImage1 = require("../../../images/projects/englishApp/english-img1.jpg");
-const englishImage2 = require("../../../images/projects/englishApp/english-img2.jpg");
-const englishImage3 = require("../../../images/projects/englishApp/english-img3.jpg");
+const dreamDatesLandingImage1 = require("../../../images/projects/dream-dates-landing/dream-dates-landing-1.jpg");
+const dreamDatesLandingImage2 = require("../../../images/projects/dream-dates-landing/dream-dates-landing-2.jpg");
+const dreamDatesLandingImage3 = require("../../../images/projects/dream-dates-landing/dream-dates-landing-3.jpg");
+
+const dreamDatesAppImage1 = require("../../../images/projects/dream-dates-app/dream-dates-1.jpg");
+const dreamDatesAppImage2 = require("../../../images/projects/dream-dates-app/dream-dates-2.jpg");
+const dreamDatesAppImage3 = require("../../../images/projects/dream-dates-app/dream-dates-3.jpg");
 
 const familyAlbum1 = require("../../../images/projects/familyAlbum/album-img3.jpg");
 const familyAlbum2 = require("../../../images/projects/familyAlbum/album-img1.jpg");
@@ -32,32 +36,32 @@ export const projectsInformations: IProjectsInformations = {
 	myself: [
 		{
 			title: "Businness Card",
-			descriptionMain: "Moja strona wizytówka",
-			descriptionFeatures: ["Formularz kontaktowy"],
+			descriptionMain: "My bussiness card.",
+			descriptionFeatures: ["One-page website", "Contact Form"],
 			descriptionTechs: ["TypeScript", "Gatsby", "Sass", "React"],
-			codeLink: "https://github.com/jatanski/portfolioNew",
-			demoLink: "https://jatanski.github.io/portfolioNew",
+			codeLink: "https://github.com/jatanski/portfolionew",
+			demoLink: "https://jatanski.github.io/portfolionew",
 			images: [businessCardImg1, businessCardImg2, businessCardImg3],
 		},
 		{
 			title: "Commision refung page",
-			descriptionMain: "Landing page wykonany na zlecenie.",
-			descriptionFeatures: ["Strona typu one-page", "Formularz kontaktowy"],
+			descriptionMain: "Landing page website wrote for financial company.",
+			descriptionFeatures: ["One-page website", "Contact Form"],
 			descriptionTechs: ["TypeScript", "Gatsby", "Sass", "React"],
 			codeLink: "https://github.com/jatanski/commisionRefund",
-			demoLink: "https://odzyskamytwojaprowizje.pl/",
+			demoLink: "https://odzyskamy-twoja-prowizje.netlify.app/",
 			images: [commisionImage1, commisionImage2, commisionImage3],
 		},
 
 		{
 			title: "Master of sport",
 			descriptionMain:
-				"Pierwsza moja większa aplikacja napisana do nauki reacta oraz node.js. Jest to dziennik treningowy oraz żywieniowy dla sportowców.",
+				"My first bigger application written to learn react and node. It is a training and nutrition journal for athletes.",
 			descriptionFeatures: [
-				"Tworzenie planów treningowych i żyweniowych",
-				"Prowadzenie dziennika treningowego",
-				"Monitorowanie postępów",
-				"Kalkulator BMI",
+				"Creating training and nutrition plans",
+				"Keeping a training diary",
+				"Monitoring progress",
+				"BMI Calculator",
 			],
 			descriptionTechs: ["JavaScript", "MongoDB", "Express", "React + Redux"],
 			codeLink: "https://github.com/jatanski/master-of-sport",
@@ -65,43 +69,53 @@ export const projectsInformations: IProjectsInformations = {
 			images: [masterOfSport1, masterOfSport2, masterOfSport3],
 		},
 		{
-			title: "English Sticky App",
-			descriptionMain: "Aplikacja w trakcie tworzenia. Będzie to aplikacja do nauki słownictwa obcego.",
+			title: "Dream Dates - Landingpage",
+			descriptionMain: "Landing page website for my date application.",
+			descriptionFeatures: ["One-page website", "Register by Facebook and Google"],
+			descriptionTechs: ["TypeScript", "Gatsby", "Sass", "React"],
+			codeLink: "https://github.com/jatanski/dreamdates-landing-page",
+			demoLink: "https://dreamdates-landing-test.netlify.app/",
+			images: [dreamDatesLandingImage1, dreamDatesLandingImage2, dreamDatesLandingImage3],
+		},
+		{
+			title: "Dream Dates - App",
+			descriptionMain:
+				"The application is used to find friends and arrange dates. The application code is private.",
 			descriptionFeatures: [
-				"Tworzenie list słówek wraz z opisem, zdjęciem i audio",
-				"Nauka systemem fiszek",
-				"Udostępnianie list słówek",
-				"Rozszerzenie do google do zapisanywania słówek ze stron internetowych",
+				"Creating profile",
+				"Browsing and searching profile another users",
+				"Making a conversation, sending likes",
+				"Real-time chat",
 			],
 			descriptionTechs: ["TypeScript", "GraphQL", "Prisma", "React + Redux", "PostreSQL"],
-			codeLink: "https://github.com/jatanski/EnglishApp",
-			demoLink: "https://github.com/jatanski/EnglishApp",
-			images: [englishImage1, englishImage2, englishImage3],
+			codeLink: "private",
+			demoLink: "https://dreamdates-test.netlify.app/",
+			images: [dreamDatesAppImage1, dreamDatesAppImage2, dreamDatesAppImage3],
 		},
 	],
 	withFriends: [
 		{
 			title: "Family Album",
 			descriptionMain:
-				"Aplikacja wykonana jako prezent świąteczny dla rodziców razem z moim bratem. Jest to album",
+				"The application allows create and share photo albums. Made as a Christmas gift for parents together with my brother.",
 			descriptionFeatures: [
-				"Tworzenie albumów ze zdjęciami wraz z opisami i datami wykonamia",
-				"Udostępnianie albumów innym członkom rodziny",
-				"Oglądanie zdjęć",
+				"Creating photo albums with descriptions and performed dates",
+				"Share album another family members",
+				"Viewing photos",
 			],
 			descriptionTechs: ["React", "Node", "TypeScript", "Express", "MongoDB"],
 			codeLink: "https://github.com/jatanski/family-album",
-			demoLink: "http://family-album.surge.sh/#/",
+			demoLink: "https://family-album-test.netlify.app/",
 			images: [familyAlbum1, familyAlbum2, familyAlbum3],
 		},
 		{
 			title: "Optimize App",
-			descriptionMain: `Aplikacja do dawania feedbacku w zespołach projektowych. Powstała podczas heckathonu na zakończenie kursu "CodersCamp - edycja IV" i zajęła II miejsce.`,
+			descriptionMain: `Application for giving feedback in project teams. It was created during the heckathon at the end of the "CodersCamp - 4th edition" and took 2nd place.`,
 			descriptionFeatures: [
-				"Tworzenie konta połączonego ze slackiem",
-				"Tworzenie zapytań do zespołu",
-				"Dawanie feedbacku",
-				"Powiadomienia chrome oraz na połączonych kanałach na slacku",
+				"Creating an account linked to slack",
+				"Creating team inquiries",
+				"Giving feedback",
+				"Chrome notifications and notifications on connected channels on slack",
 			],
 			descriptionTechs: ["JavaScript", "MongoDB", "Express", "React + Redux"],
 			codeLink: "https://github.com/jatanski/Optimize",
@@ -110,10 +124,10 @@ export const projectsInformations: IProjectsInformations = {
 		},
 		{
 			title: "LifeChat",
-			descriptionMain: `Aplikacja ułatwiajaca pracę i odstresowująca dla osób pracujących na czatach internetowych. Powstała podczas Heckathonu na zakończenie kursu "CodersCamp - edycja III" i zajęła III miejsce.`,
+			descriptionMain: `Application facilitating work and de-stressing for people working in online chats. It was created during the Heckathon at the end of the "CodersCamp - 3rd edition" course and took third place.`,
 			descriptionFeatures: [
-				"Dwustronny czat w czasie rzeczywistym oparty o web sockety",
-				"Wykorzystując słowa kluczowe w swoim odpowiedziach pracownik czatu zbiera punkty, które potem może wymieniać na nagrody",
+				"Real-time two-way chat based on web sockets",
+				"By using keywords in his replies, the chat employee collects points that can then be exchanged for prizes",
 			],
 			descriptionTechs: ["JavaScript", "MongoDB", "Express", "React + Redux", "WebSocket"],
 			codeLink: "https://github.com/jatanski/LifeChat",
@@ -125,14 +139,15 @@ export const projectsInformations: IProjectsInformations = {
 
 export const startProject: MyProject = {
 	title: "Family Album",
-	descriptionMain: "Aplikacja wykonana jako prezent świąteczny dla rodziców razem z moim bratem. Jest to album",
+	descriptionMain:
+		"The application allows create and share photo albums. Made as a Christmas gift for parents together with my brother.",
 	descriptionFeatures: [
-		"Tworzenie albumów ze zdjęciami wraz z opisami i datami wykonamia",
-		"Udostępnianie albumów innym członkom rodziny",
-		"Oglądanie zdjęć",
+		"Creating photo albums with descriptions and performed dates",
+		"Share album another family members",
+		"Viewing photos",
 	],
 	descriptionTechs: ["React", "Node", "TypeScript", "Express", "MongoDB"],
 	codeLink: "https://github.com/jatanski/family-album",
-	demoLink: "http://family-album.surge.sh/#/",
+	demoLink: "https://family-album-test.netlify.app/",
 	images: [familyAlbum1, familyAlbum2, familyAlbum3],
 };

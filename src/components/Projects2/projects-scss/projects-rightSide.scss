@@ -8,7 +8,6 @@
 	width: 40vw;
 	margin: 20vh 0vw;
 	position: relative;
-	border-radius: 15px;
 	background-color: $fifth-bgc-color;
 	box-shadow: 5px 5px 10px 5px #333;
 
@@ -20,6 +19,10 @@
 	@media (max-width: 1360px) {
 		height: 45vh;
 		width: 45vw;
+	}
+
+	@media (max-width: 1280px) {
+		height: 60vh;
 	}
 
 	@media (max-width: 800px) {
@@ -48,15 +51,21 @@
 
 	&__title {
 		position: absolute;
-		top: 12%;
-		left: 0%;
-		background-color: $second-bgc-color;
-		height: 13%;
-		width: 60%;
+		top: -6%;
+		left: -2%;
+		background: $first-bgc-color;
+		background: -moz-linear-gradient(100deg, $first-bgc-color 0%, $second-bgc-color 100%);
+		background: -webkit-linear-gradient(100deg, $first-bgc-color 0%, $second-bgc-color 100%);
+		background: linear-gradient(100deg, $first-bgc-color 0%, $second-bgc-color 100%);
+		height: 6%;
+		width: 100%;
+		padding: 1.6rem 16px;
+		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 		z-index: 5;
+		border-radius: 0.25rem;
 
-		@media (max-width: 800px) {
-			width: 60%;
+		@media (max-width: 420px) {
+			left: -5%;
 		}
 
 		.title-text {
@@ -65,15 +74,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			letter-spacing: 1px;
-			font-size: 1.5rem;
-
-			@media (max-width: 1500px) {
-				font-size: 1.3rem;
-			}
-
-			@media (max-width: 420px) {
-				font-size: 0.9rem;
-			}
+			font-size: 1.9rem;
 		}
 	}
 
@@ -82,11 +83,14 @@
 		top: 0%;
 		width: 100%;
 		height: 50vh;
-		border-radius: 15px;
 		overflow: hidden;
 
 		@media (max-width: 1360px) {
 			height: 45vh;
+		}
+
+		@media (max-width: 1280px) {
+			height: 60vh;
 		}
 
 		@media (max-width: 800px) {
@@ -112,6 +116,7 @@
 		.image-project {
 			height: 100%;
 			width: 100%;
+			top: 10%;
 			position: absolute;
 			background-size: cover;
 			background-position: center;
@@ -131,17 +136,12 @@
 		height: 4vw;
 		position: absolute;
 		right: 10%;
-		border-radius: 50%;
+		border-radius: 20%;
 		z-index: 2;
 
 		@media (max-width: 1500px) {
 			width: 5vw;
 			height: 5vw;
-		}
-
-		@media (max-width: 1300px) {
-			width: 6vw;
-			height: 6vw;
 		}
 
 		@media (max-width: 800px) {
@@ -363,7 +363,7 @@
 		}
 
 		&.element-description {
-			bottom: 70%;
+			bottom: 65%;
 			background-color: $third-bgc-color;
 
 			&:hover {
@@ -372,7 +372,7 @@
 		}
 
 		&.element-code {
-			bottom: 40%;
+			bottom: 36%;
 			background-color: $first-bgc-color;
 
 			&:hover {
@@ -381,7 +381,7 @@
 		}
 
 		&.element-demo {
-			bottom: 10%;
+			bottom: 7%;
 			background-color: $fourth-bgc-color;
 
 			&:hover {

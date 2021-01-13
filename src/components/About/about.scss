@@ -11,6 +11,10 @@
 		flex-direction: column;
 	}
 
+	@media (max-width: 420px) {
+		min-height: 120vh;
+	}
+
 	&__text {
 		@media (max-width: 800px) {
 			position: relative;

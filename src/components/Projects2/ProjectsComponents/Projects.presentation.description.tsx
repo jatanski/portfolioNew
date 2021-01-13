@@ -19,17 +19,17 @@ const ProjectsPresentationDescription: FC<ProjectsPresentationDescriptionProps> 
 			<div className="text-description">
 				<h4 className="text-description__title element-text-title">
 					<FontAwesomeIcon icon={faCommentAlt} />
-					Opis:
+					Description:
 				</h4>
 				<p>{descriptionMain}</p>
 			</div>
 			<div className="text-features">
 				<h4 className="text-features__title element-text-title">
 					<FontAwesomeIcon icon={faToolbox} />
-					Funkcjonalności:
+					Features:
 				</h4>
 				<ul className="text-features__list">
-					{descriptionFeatures.map(feature => (
+					{descriptionFeatures.map((feature) => (
 						<li className="text-features__list-element element-text-listElement" key={feature}>
 							<FontAwesomeIcon icon={faChevronCircleRight} />
 							{feature}
@@ -40,10 +40,10 @@ const ProjectsPresentationDescription: FC<ProjectsPresentationDescriptionProps> 
 			<div className="text-techs">
 				<h4 className="text-techs__title element-text-title">
 					<FontAwesomeIcon icon={faAndroid} />
-					Użyte technologie:
+					Technologies:
 				</h4>
 				<ul className="text-techs__list">
-					{descriptionTechs.map(tech => (
+					{descriptionTechs.map((tech) => (
 						<li className="text-techs__list--element element-text-listElement" key={tech}>
 							<FontAwesomeIcon icon={faChevronCircleRight} />
 							{tech}

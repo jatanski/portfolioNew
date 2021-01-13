@@ -1,6 +1,7 @@
+![Business Card](https://github.com/jatanski/portfolioNew/blob/master/main-photo.JPG)
 
 # Business Card
-My actual business page. Wrote in gatsby. Styles in Sass.
+My actual business website wrote in [Gatsy](https://www.gatsbyjs.com/).
 
 ## What's in the package?
 
@@ -14,6 +15,10 @@ My actual business page. Wrote in gatsby. Styles in Sass.
 * gatsby
 * react
 * typescript
+
+## Demo
+
+[Demo version](https://jatanski.github.io/portfolioNew/)
 
 ## Available Scripts
 
